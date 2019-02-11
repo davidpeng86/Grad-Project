@@ -5,34 +5,32 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour {
 
 	[SerializeField]
-	float moveForce  = 10f;
-	Vector3 speed;
+	float moveForce  = 1000f;
 	float h_input;
 	float v_input;
 
-	[SerializeField]
-	float maxSpeed;
-	float negMaxSpeed;
-
-	Rigidbody rb;
+    Rigidbody rb;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		negMaxSpeed = -1 * maxSpeed;
-		h_input = moveForce * Input.GetAxis("Horizontal");
-		Debug.Log("h  " + h_input);
-		v_input = moveForce * Input.GetAxis("Vertical");
-		Debug.Log("v  "+ v_input);
-		rb.AddForce(transform.right * h_input * Time.deltaTime);
-		rb.AddForce(transform.forward * v_input * Time.deltaTime);
-		// speed = new Vector3(Mathf.Clamp(rb.velocity.x,maxSpeed,negMaxSpeed),
-		// 					rb.velocity.y,
-		// 					Mathf.Clamp(rb.velocity.z,maxSpeed,negMaxSpeed));
+    }
 
-		//rb.velocity = speed;
-	}
+    // Update is called once per frame
+    void Update () {
+		
+		h_input = Input.GetAxis("Horizontal");
+		v_input = Input.GetAxis("Vertical");
+
+        //Vector3 newPosition = new Vector3(Mathf.Lerp(0,h_input,Time.deltaTime), 0.0f, Mathf.Lerp(0,v_input,Time.deltaTime));
+        //transform.LookAt(newPosition + transform.position);
+        Vector3 newPosition = new Vector3(h_input, 0f, v_input);
+
+        transform.eulerAngles = new Vector3(0,
+            Mathf.LerpAngle(transform.eulerAngles.y, v_input * 180 + h_input * 90, Time.time), 0);
+
+        if (h_input != 0 || v_input!= 0)
+        rb.AddForce(transform.forward * moveForce * Time.deltaTime);
+
+
+    }
 }
