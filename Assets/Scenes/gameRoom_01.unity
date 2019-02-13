@@ -139,7 +139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 23291298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.601, y: 0.34, z: 1.4699999}
+  m_LocalPosition: {x: -5.13, y: 0.34, z: 3.4}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_Children:
   - {fileID: 744541884}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48081e89938d974bb7856124ad19d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 200
+  shootForce: 500
   gunPoint: {fileID: 1004261728}
   bullet: {fileID: 23291298}
 --- !u!1 &558076074
@@ -281,7 +281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558076075
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.49019608, g: 1, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 1
+  m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -652,7 +652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1374911399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -660,7 +660,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1374911398}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -705,7 +705,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1374911398}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1374911402
 Transform:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.49019608, g: 1, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 1
+  m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1127,7 +1127,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.49019608, g: 1, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 1
+  m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
