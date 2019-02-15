@@ -21,10 +21,12 @@ public class shoot : MonoBehaviour {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
 
-            temp_bullet.transform.Rotate(Vector3.left);
+            temp_bullet.transform.Rotate(Vector3.left * 90f, Space.Self);
+
 
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
-            temp_rigidbody.AddRelativeForce(Vector3.forward * shootForce);
+            temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
+            Debug.Log("shot");
         }
 	}
 
