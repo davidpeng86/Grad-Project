@@ -27,7 +27,15 @@ public class shoot : MonoBehaviour {
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
             Debug.Log("shot");
+
+            StartCoroutine(CountDestroy(temp_bullet));
         }
 	}
+
+    IEnumerator CountDestroy(GameObject obj){
+
+        yield return new WaitForSeconds(2);
+        Destroy(obj);
+    }
 
 }

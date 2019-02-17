@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour {
 
+    public float rotateSpeed = 5f;
 	[SerializeField]
 	float moveForce  = 1000f;
 	float h_input;
@@ -21,11 +22,14 @@ public class playerMovement : MonoBehaviour {
 		h_input = Input.GetAxis("Horizontal");
 		v_input = Input.GetAxis("Vertical");
 
-        Vector3 newposition = new Vector3(Mathf.Lerp(0, h_input, Time.deltaTime), 0.0f, Mathf.Lerp(0, v_input, Time.deltaTime));
-        transform.LookAt(newposition + transform.position);
-
-        if (h_input != 0 || v_input!= 0)
+        if(h_input!=0 || v_input!=0){
+        Vector3 newPosition = new Vector3(Mathf.Lerp(0, h_input, Time.deltaTime/10), transform.position.y, Mathf.Lerp(0, v_input, Time.deltaTime/10));
+        Vector3 dir = newPosition - transform.position;
+        Quaternion Q_rotation = Quaternion.LookRotation(dir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Q_rotation, rotateSpeed * Time.deltaTime);
+        
         rb.AddForce(transform.forward * moveForce * Time.deltaTime);
+        }
 
 
     }
