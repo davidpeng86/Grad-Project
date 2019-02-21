@@ -17,7 +17,7 @@ public class shoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("space")) {
+        if (Input.GetButtonDown("Fire1")) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
 
