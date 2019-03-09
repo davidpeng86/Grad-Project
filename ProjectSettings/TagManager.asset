@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - explode
-  - 
-  - 
-  - 
+  - ground_level
+  - midair_level
+  - ground
   - 
   - 
   - 
