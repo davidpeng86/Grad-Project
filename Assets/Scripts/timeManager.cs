@@ -14,6 +14,6 @@ public class timeManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			Debug.Log((int)Time.time);
+		//Debug.Log((int)Time.time);
 	}
 }

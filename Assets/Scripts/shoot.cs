@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour {
 
+    public GameObject bullet;
+
     [SerializeField]
     float shootForce = 20f;
     [SerializeField]
+    float atkRadius = 2f;
+    [SerializeField]
     GameObject gunPoint;
-    
-    public GameObject bullet;
+    Animator anim;
 	// Use this for initialization
 	void Start () {
-		
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && gunPoint != null) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
 
@@ -28,14 +31,25 @@ public class shoot : MonoBehaviour {
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
             Debug.Log("shot");
 
-            StartCoroutine(CountDestroy(temp_bullet));
+            Destroy(temp_bullet,2);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Mouse1)){
+            Collider[] colliders = Physics.OverlapSphere(transform.position, atkRadius);
+            if(colliders.Length <= 0) return;
+            anim.SetBool("enemy",false);
+            anim.SetTrigger("attack");
+            for (int i = 0; i < colliders.Length; i++){
+                if (colliders[i].transform.root != transform){
+                    if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player")){
+                        anim.SetBool("enemy",true);
+                    }
+                    print(colliders[i].gameObject.name);
+                }
+            }
+                
         }
 	}
 
-    IEnumerator CountDestroy(GameObject obj){
-
-        yield return new WaitForSeconds(2);
-        Destroy(obj);
-    }
 
 }
