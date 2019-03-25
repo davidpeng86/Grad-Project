@@ -29,6 +29,7 @@ public class shoot : MonoBehaviour {
 
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
+
             Debug.Log("shot");
 
             Destroy(temp_bullet,2);
@@ -41,8 +42,10 @@ public class shoot : MonoBehaviour {
             anim.SetTrigger("attack");
             for (int i = 0; i < colliders.Length; i++){
                 if (colliders[i].transform.root != transform){
-                    if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player")){
+                    if(colliders[i].gameObject.tag == "player"){
                         anim.SetBool("enemy",true);
+                        PlayerState ps = colliders[i].GetComponent<PlayerState>();
+                        ps.currentHp -= 3;
                     }
                     print(colliders[i].gameObject.name);
                 }
