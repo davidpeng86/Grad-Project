@@ -6,8 +6,8 @@ public class PlayerState : MonoBehaviour
 {
     private int hpMax = 5;
     public int currentHp;
-    bool isDead;
-    bool win;
+    public bool isDead;
+    public bool win;
 
 
     // Start is called before the first frame update

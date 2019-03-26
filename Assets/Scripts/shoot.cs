@@ -26,12 +26,8 @@ public class shoot : MonoBehaviour {
 
             temp_bullet.transform.Rotate(Vector3.left * 90f, Space.Self);
 
-
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
-
-            Debug.Log("shot");
-
             Destroy(temp_bullet,2);
         }
 
@@ -45,14 +41,16 @@ public class shoot : MonoBehaviour {
                     if(colliders[i].gameObject.tag == "player"){
                         anim.SetBool("enemy",true);
                         PlayerState ps = colliders[i].GetComponent<PlayerState>();
-                        ps.currentHp -= 3;
+                        StartCoroutine(hurt(ps));
                     }
                     print(colliders[i].gameObject.name);
                 }
             }
-                
         }
 	}
 
-
+    IEnumerator hurt( PlayerState p){
+        yield return new WaitForSeconds(1);
+        p.currentHp -= 3;
+    }
 }
