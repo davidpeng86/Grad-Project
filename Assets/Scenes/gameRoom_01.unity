@@ -845,8 +845,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481541398}
   m_LocalRotation: {x: 0.27984518, y: -0.3647056, z: 0.11591566, w: 0.88047725}
-  m_LocalPosition: {x: 0, y: 0, z: -1942.231}
-  m_LocalScale: {x: 0.0012023527, y: 0.0012023527, z: 0.0012023527}
+  m_LocalPosition: {x: 0, y: 0, z: -1442.2646}
+  m_LocalScale: {x: 0.0017274787, y: 0.0017274787, z: 0.0017274787}
   m_Children:
   - {fileID: 1100532961}
   m_Father: {fileID: 0}
@@ -854,8 +854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1942.2981, y: 1939.2655}
-  m_SizeDelta: {x: 970.99994, y: 546}
+  m_AnchoredPosition: {x: 1442.2646, y: 1442.3}
+  m_SizeDelta: {x: 811, y: 456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &498077008
 GameObject:
@@ -1687,7 +1687,7 @@ RectTransform:
   m_GameObject: {fileID: 1100532960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1224465000}
   - {fileID: 421887885}
@@ -1699,7 +1699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -197}
+  m_AnchoredPosition: {x: -203, y: -174}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1121498474
@@ -3360,10 +3360,10 @@ Camera:
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.33574829, g: 0.4931512, b: 0.50735295, a: 0}
   m_projectionMatrixMode: 2
-  m_SensorSize: {x: 70.41, y: 52.63}
+  m_SensorSize: {x: 4.8, y: 3.5}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 6030.916
+  m_GateFitMode: 3
+  m_FocalLength: 401.06793
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3371,7 +3371,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 3999
+  far clip plane: 4500
   field of view: 0.5
   orthographic: 0
   orthographic size: 10.59
@@ -3398,7 +3398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704882327}
   m_LocalRotation: {x: 0.27984518, y: -0.3647056, z: 0.11591566, w: 0.88047725}
-  m_LocalPosition: {x: 1999, y: 1996, z: -1999}
+  m_LocalPosition: {x: 1498, y: 1498, z: -1498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
