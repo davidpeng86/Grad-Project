@@ -20,7 +20,7 @@ public class shoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire1") && gunPoint != null) {
+        if (Input.GetButtonDown("Fire1P1") && gunPoint != null) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
 
