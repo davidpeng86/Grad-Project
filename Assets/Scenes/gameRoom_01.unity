@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 420507364}
   - component: {fileID: 420507363}
   m_Layer: 11
-  m_Name: Player
+  m_Name: Player 0
   m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420507355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e48081e89938d974bb7856124ad19d00, type: 3}
   m_Name: 
@@ -575,6 +575,7 @@ MonoBehaviour:
   shootForce: 600
   atkRadius: 2
   gunPoint: {fileID: 137998917}
+  anim: {fileID: 0}
 --- !u!114 &420507357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f155747e8b5448fb85ba216eee69188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 1140768831008158, guid: 0d3e59adec975824e8a67bc45b249c54, type: 3}
+  shootForce: 600
+  atkRadius: 2
+  gunPoint: {fileID: 137998917}
+  controllernumber: 0
   Speed: 5
   JumpHeight: 2
   GroundDistance: 0.2
@@ -1620,6 +1626,7 @@ MonoBehaviour:
   shootForce: 20
   atkRadius: 2
   gunPoint: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &775459592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,6 +1639,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f155747e8b5448fb85ba216eee69188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  shootForce: 600
+  atkRadius: 2
+  gunPoint: {fileID: 0}
+  controllernumber: 0
   Speed: 5
   JumpHeight: 2
   GroundDistance: 0.2
@@ -3000,6 +3012,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 02da0d3aff1df49b887f15d87fc3dfee, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02da0d3aff1df49b887f15d87fc3dfee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02da0d3aff1df49b887f15d87fc3dfee, type: 3}
       propertyPath: m_Layer
