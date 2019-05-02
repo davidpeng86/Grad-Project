@@ -27,5 +27,22 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    
+    public int x;
+    public int y;
+    public int w;
+    public int h;
+
+    private void OnGUI()
+    {
+        string state = "";
+        for (int i = 0; i < currentHp; i++) {
+            if (currentHp < 1) {
+                state = "dead";
+                break;
+            }
+            state += "Ｏ ";
+        }
+        GUI.Box(new Rect(x, y, w, h), state);
+    }
+
 }

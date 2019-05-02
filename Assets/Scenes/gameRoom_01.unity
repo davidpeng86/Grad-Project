@@ -194,6 +194,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &35471754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -694,6 +698,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &295060925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -887,6 +895,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 500
+  y: 450
+  w: 100
+  h: 25
 --- !u!114 &333918023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1279,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 200
+  y: 450
+  w: 100
+  h: 25
 --- !u!1 &421887884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &481541399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,6 +1682,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &556786184
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1768,6 +1788,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 800
+  y: 450
+  w: 100
+  h: 25
 --- !u!114 &557882929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,7 +1904,7 @@ Transform:
   - {fileID: 377193398}
   - {fileID: 1328073079}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567629863
 GameObject:
@@ -1894,7 +1918,6 @@ GameObject:
   - component: {fileID: 567629867}
   - component: {fileID: 567629866}
   - component: {fileID: 567629865}
-  - component: {fileID: 567629868}
   m_Layer: 9
   m_Name: wall (1)
   m_TagString: Untagged
@@ -1924,7 +1947,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567629863}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -1962,7 +1985,7 @@ BoxCollider:
   m_GameObject: {fileID: 567629863}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1974,22 +1997,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567629863}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &567629868
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567629863}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &573299773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,7 +2149,6 @@ GameObject:
   - component: {fileID: 599867885}
   - component: {fileID: 599867884}
   - component: {fileID: 599867883}
-  - component: {fileID: 599867882}
   m_Layer: 9
   m_Name: wall (6)
   m_TagString: Untagged
@@ -2164,22 +2170,6 @@ Transform:
   m_Father: {fileID: 1935912165}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 40.094, z: 0}
---- !u!54 &599867882
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599867880}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!23 &599867883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2188,7 +2178,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599867880}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -2226,7 +2216,7 @@ BoxCollider:
   m_GameObject: {fileID: 599867880}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2892,6 +2882,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &847091294
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3097,7 +3091,6 @@ GameObject:
   - component: {fileID: 997422787}
   - component: {fileID: 997422786}
   - component: {fileID: 997422785}
-  - component: {fileID: 997422784}
   m_Layer: 9
   m_Name: wall (3)
   m_TagString: Untagged
@@ -3119,22 +3112,6 @@ Transform:
   m_Father: {fileID: 1935912165}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0.47000003, y: -69.818, z: -60.185}
---- !u!54 &997422784
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997422782}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!23 &997422785
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3143,7 +3120,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997422782}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -3181,7 +3158,7 @@ BoxCollider:
   m_GameObject: {fileID: 997422782}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3569,7 +3546,6 @@ GameObject:
   - component: {fileID: 1084366770}
   - component: {fileID: 1084366769}
   - component: {fileID: 1084366768}
-  - component: {fileID: 1084366771}
   m_Layer: 9
   m_Name: wall (5)
   m_TagString: Untagged
@@ -3599,7 +3575,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084366766}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -3637,7 +3613,7 @@ BoxCollider:
   m_GameObject: {fileID: 1084366766}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3649,22 +3625,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084366766}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &1084366771
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084366766}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1100532960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4032,6 +3992,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1260131810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4220,7 +4184,6 @@ GameObject:
   - component: {fileID: 1294994094}
   - component: {fileID: 1294994093}
   - component: {fileID: 1294994092}
-  - component: {fileID: 1294994096}
   m_Layer: 9
   m_Name: wall
   m_TagString: Untagged
@@ -4236,7 +4199,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294994091}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -4274,7 +4237,7 @@ BoxCollider:
   m_GameObject: {fileID: 1294994091}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4300,22 +4263,6 @@ Transform:
   m_Father: {fileID: 1935912165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -35.515003, y: 0, z: 0}
---- !u!54 &1294994096
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294994091}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1328073078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,6 +4459,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1373623406
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4650,6 +4601,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!1 &1377616740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,7 +4846,6 @@ GameObject:
   - component: {fileID: 1524553691}
   - component: {fileID: 1524553690}
   - component: {fileID: 1524553689}
-  - component: {fileID: 1524553692}
   m_Layer: 9
   m_Name: wall (4)
   m_TagString: Untagged
@@ -4921,7 +4875,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524553687}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -4959,7 +4913,7 @@ BoxCollider:
   m_GameObject: {fileID: 1524553687}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4971,22 +4925,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524553687}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &1524553692
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524553687}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1552900530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,7 +4965,7 @@ Transform:
   - {fileID: 1910563415}
   - {fileID: 1260131807}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566761185
 GameObject:
@@ -5151,6 +5089,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1580919084
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5230,6 +5172,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1591981540
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5480,6 +5426,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1662570132
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6277,7 +6227,6 @@ GameObject:
   - component: {fileID: 1830593302}
   - component: {fileID: 1830593301}
   - component: {fileID: 1830593300}
-  - component: {fileID: 1830593299}
   m_Layer: 9
   m_Name: wall (7)
   m_TagString: Untagged
@@ -6299,22 +6248,6 @@ Transform:
   m_Father: {fileID: 1935912165}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -33.93, z: 0}
---- !u!54 &1830593299
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830593297}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!23 &1830593300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6323,7 +6256,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830593297}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -6361,7 +6294,7 @@ BoxCollider:
   m_GameObject: {fileID: 1830593297}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -6532,6 +6465,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1870498282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6589,7 +6526,6 @@ GameObject:
   - component: {fileID: 1901754065}
   - component: {fileID: 1901754064}
   - component: {fileID: 1901754063}
-  - component: {fileID: 1901754066}
   m_Layer: 9
   m_Name: wall (2)
   m_TagString: Untagged
@@ -6619,7 +6555,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901754061}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -6657,7 +6593,7 @@ BoxCollider:
   m_GameObject: {fileID: 1901754061}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -6669,22 +6605,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901754061}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &1901754066
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901754061}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1910563414
 GameObject:
   m_ObjectHideFlags: 0
@@ -6733,6 +6653,10 @@ MonoBehaviour:
   currentHp: 0
   isDead: 0
   win: 0
+  x: 0
+  y: 0
+  w: 0
+  h: 0
 --- !u!23 &1910563418
 MeshRenderer:
   m_ObjectHideFlags: 0
