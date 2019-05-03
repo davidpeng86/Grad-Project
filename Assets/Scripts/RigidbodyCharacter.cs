@@ -54,7 +54,7 @@ public class RigidbodyCharacter : MonoBehaviour
         if (Input.GetButtonDown(shoot_attack) && gunPoint != null) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
-
+            temp_bullet.tag = this.tag;
             temp_bullet.transform.Rotate(Vector3.left * 90f, Space.Self);
 
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();

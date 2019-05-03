@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Fire
   - player
+  - player0
+  - player1
+  - player2
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - ground_level
   - midair_level
   - ground
-  - 
+  - player
   - 
   - 
   - 

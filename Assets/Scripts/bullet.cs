@@ -18,7 +18,7 @@ public class bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "player" ) {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("player") && collision.gameObject.tag != this.tag) {
             PlayerState stateChange = collision.gameObject.GetComponent<PlayerState>();
             stateChange.currentHp -= 1;
             Destroy(gameObject);
