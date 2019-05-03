@@ -21,6 +21,7 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("player") && collision.gameObject.tag != this.tag) {
             PlayerState stateChange = collision.gameObject.GetComponent<PlayerState>();
             stateChange.currentHp -= 1;
+            stateChange.TakeDamage();
             Destroy(gameObject);
         }
     }

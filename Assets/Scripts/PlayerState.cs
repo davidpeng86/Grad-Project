@@ -8,11 +8,12 @@ public class PlayerState : MonoBehaviour
     public int currentHp;
     public bool isDead;
     public bool win;
-
+    MeshRenderer mr;
 
     // Start is called before the first frame update
     void Start()
     {
+        mr = GetComponent<MeshRenderer>();
         currentHp = hpMax;
         isDead = false;
         win = false;
@@ -21,10 +22,7 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHp <= 0) {
-            isDead = true;
-            Destroy(gameObject);
-        }
+        
     }
 
     public int x;
@@ -45,4 +43,22 @@ public class PlayerState : MonoBehaviour
         GUI.Box(new Rect(x, y, w, h), state);
     }
 
+    public void TakeDamage() {
+        StartCoroutine(flash());
+    }
+
+    IEnumerator flash() {
+        for(int i = 0; i<3; i++) {
+            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            yield return new WaitForSeconds(0.05f);
+            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(0.05f);
+        if (currentHp <= 0)
+        {
+            isDead = true;
+            Destroy(gameObject);
+        }
+    }
 }

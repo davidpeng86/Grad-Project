@@ -69,10 +69,12 @@ public class RigidbodyCharacter : MonoBehaviour
             anim.SetTrigger("attack");
             for (int i = 0; i < colliders.Length; i++){
                 if (colliders[i].transform.root != transform){
-                    if(colliders[i].gameObject.tag == "player"){
+                    if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player"))
+                    {
                         anim.SetBool("enemy",true);
                         PlayerState ps = colliders[i].GetComponent<PlayerState>();
-                        StartCoroutine(hurt(ps));
+                        ps.currentHp -= 3;
+                        ps.TakeDamage();
                     }
                     print(colliders[i].gameObject.name);
                 }
@@ -91,8 +93,5 @@ public class RigidbodyCharacter : MonoBehaviour
         _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
     }
 
-    IEnumerator hurt( PlayerState p){
-    yield return new WaitForSeconds(1);
-    p.currentHp -= 3;
-    }
+
 }
