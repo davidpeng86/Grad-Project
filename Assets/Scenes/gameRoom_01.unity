@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -938,10 +938,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1140768831008158, guid: 0d3e59adec975824e8a67bc45b249c54, type: 3}
+  controllernumber: 1
   shootForce: 600
   atkRadius: 2
   gunPoint: {fileID: 631254637}
-  controllernumber: 1
+  shoot_CD: 1
+  sword_CD: 3
   Speed: 5
   JumpHeight: 2
   GroundDistance: 0.2
@@ -1170,10 +1172,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1140768831008158, guid: 0d3e59adec975824e8a67bc45b249c54, type: 3}
+  controllernumber: 0
   shootForce: 600
   atkRadius: 2
   gunPoint: {fileID: 137998917}
-  controllernumber: 0
+  shoot_CD: 1
+  sword_CD: 3
   Speed: 5
   JumpHeight: 2
   GroundDistance: 0.2
@@ -1775,10 +1779,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1140768831008158, guid: 0d3e59adec975824e8a67bc45b249c54, type: 3}
+  controllernumber: 2
   shootForce: 600
   atkRadius: 2
   gunPoint: {fileID: 135932596}
-  controllernumber: 2
+  shoot_CD: 1
+  sword_CD: 3
   Speed: 5
   JumpHeight: 2
   GroundDistance: 0.2

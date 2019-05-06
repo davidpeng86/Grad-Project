@@ -5,7 +5,7 @@ using UnityEngine;
 public class RigidbodyCharacter : MonoBehaviour
 {
     public GameObject bullet;
-
+    public int controllernumber;
     [SerializeField]
     float shootForce = 600f;
     [SerializeField]
@@ -15,12 +15,13 @@ public class RigidbodyCharacter : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    private int controllernumber;
+    private int shoot_CD = 1, sword_CD = 3;
     private string horaxis;
     private string veraxis;
     private string shoot_attack;
     private string sword_attack;
 
+    private float shoot_count = 0, sword_count = 0;
 
     public float Speed = 5f;
     public float JumpHeight = 2f;
@@ -50,8 +51,12 @@ public class RigidbodyCharacter : MonoBehaviour
         if (_inputs != Vector3.zero)
             transform.forward = _inputs;
 
+        shoot_count += (float)1/60;
+        sword_count += (float)1/60;
+        print(shoot_count);
+        print(sword_count);
 
-        if (Input.GetButtonDown(shoot_attack) && gunPoint != null) {
+        if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count >= shoot_CD) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
             temp_bullet.tag = this.tag;
@@ -59,14 +64,19 @@ public class RigidbodyCharacter : MonoBehaviour
 
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
+            shoot_count = 0;
             Destroy(temp_bullet,2);
         }
 
-        if(Input.GetButtonDown(sword_attack)){
+        if(Input.GetButtonDown(sword_attack) && sword_count >= sword_CD){
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, atkRadius);
             if(colliders.Length <= 0) return;
             anim.SetBool("enemy",false);
             anim.SetTrigger("attack");
+            sword_count = 0;
+
+            colliders = Physics.OverlapSphere(transform.position, atkRadius);
             for (int i = 0; i < colliders.Length; i++){
                 if (colliders[i].transform.root != transform){
                     if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player"))
