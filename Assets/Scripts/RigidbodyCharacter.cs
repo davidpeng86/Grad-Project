@@ -51,8 +51,11 @@ public class RigidbodyCharacter : MonoBehaviour
         if (_inputs != Vector3.zero)
             transform.forward = _inputs;
 
-        shoot_count += (float)1/60;
-        sword_count += (float)1/60;
+        if(shoot_count <= shoot_CD)
+            shoot_count += (float)1/60;
+        if(sword_count <= sword_CD)
+            sword_count += (float)1/60;
+
         print(shoot_count);
         print(sword_count);
 
@@ -91,6 +94,15 @@ public class RigidbodyCharacter : MonoBehaviour
             }
         }
     }
+    [Range(0f,1f)]
+    public float x,y;
+    int w = 20,h = 20;
+    private void OnGUI() {
+        GUI.Box(new Rect((x - 0.03f) * Screen.width, y * Screen.height, w, h), shoot_count.ToString());
+        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), sword_count.ToString());
+    }
+
+
 
     Vector3 newPosition = Vector3.zero;
     void FixedUpdate()

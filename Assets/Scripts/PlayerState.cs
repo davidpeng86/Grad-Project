@@ -24,9 +24,8 @@ public class PlayerState : MonoBehaviour
     {
         
     }
-
-    public int x;
-    public int y;
+    [Range(0f,1f)]
+    public float x,y;
     public int w;
     public int h;
 
@@ -40,7 +39,7 @@ public class PlayerState : MonoBehaviour
             }
             state += "Ｏ ";
         }
-        GUI.Box(new Rect(x, y, w, h), state);
+        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), state);
     }
 
     public void TakeDamage() {
