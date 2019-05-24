@@ -51,15 +51,15 @@ public class RigidbodyCharacter : MonoBehaviour
         if (_inputs != Vector3.zero)
             transform.forward = _inputs;
 
-        if(shoot_count <= shoot_CD)
-            shoot_count += (float)1/60;
-        if(sword_count <= sword_CD)
-            sword_count += (float)1/60;
+        if(shoot_count >= 0)
+            shoot_count -= (float)1/60;
+        if(sword_count >= 0)
+            sword_count -= (float)1/60;
 
         print(shoot_count);
         print(sword_count);
 
-        if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count >= shoot_CD) {
+        if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
             temp_bullet.tag = this.tag;
@@ -67,17 +67,17 @@ public class RigidbodyCharacter : MonoBehaviour
 
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
-            shoot_count = 0;
+            shoot_count = shoot_CD;
             Destroy(temp_bullet,2);
         }
 
-        if(Input.GetButtonDown(sword_attack) && sword_count >= sword_CD){
+        if(Input.GetButtonDown(sword_attack) && sword_count <= 0){
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, atkRadius);
             if(colliders.Length <= 0) return;
             anim.SetBool("enemy",false);
             anim.SetTrigger("attack");
-            sword_count = 0;
+            sword_count = sword_CD;
 
             colliders = Physics.OverlapSphere(transform.position, atkRadius);
             for (int i = 0; i < colliders.Length; i++){
@@ -94,12 +94,13 @@ public class RigidbodyCharacter : MonoBehaviour
             }
         }
     }
+
     [Range(0f,1f)]
     public float x,y;
-    int w = 20,h = 20;
+    int w = 40,h = 20;
     private void OnGUI() {
-        GUI.Box(new Rect((x - 0.03f) * Screen.width, y * Screen.height, w, h), shoot_count.ToString());
-        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), sword_count.ToString());
+        GUI.Box(new Rect((x - 0.03f) * Screen.width, y * Screen.height, w, h), shoot_count.ToString("0.0"));
+        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), sword_count.ToString("0.0"));
     }
 
 
