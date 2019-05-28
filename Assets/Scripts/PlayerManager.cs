@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class PlayerManager : MonoBehaviour
 {
-    GameObject[] players;
+    List<GameObject> players = new List<GameObject>();
     List<PlayerState> playerState = new List<PlayerState>();
     // Start is called before the first frame update
     void Start()
     {
-        players = GameObject.FindGameObjectsWithTag("player");
+        for(int i = 0; i<UnityEditorInternal.InternalEditorUtility.tags.Length; i++){
+            Debug.Log(UnityEditorInternal.InternalEditorUtility.tags[i]);
+            if(UnityEditorInternal.InternalEditorUtility.tags[i].Contains("player")){
+                if(GameObject.FindGameObjectsWithTag(UnityEditorInternal.InternalEditorUtility.tags[i]).Length>0){
+                    players.Add(GameObject.FindGameObjectsWithTag(UnityEditorInternal.InternalEditorUtility.tags[i])[0]);
+                }
+                
+            }
+        }
+        
         foreach (GameObject player in players) {
             playerState.Add(player.GetComponent<PlayerState>());
         }
