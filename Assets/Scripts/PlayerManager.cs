@@ -7,18 +7,23 @@ public class PlayerManager : MonoBehaviour
 {
     List<GameObject> players = new List<GameObject>();
     List<PlayerState> playerState = new List<PlayerState>();
+
+    GameObject[] empty = Array.Empty<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<UnityEditorInternal.InternalEditorUtility.tags.Length; i++){
-            Debug.Log(UnityEditorInternal.InternalEditorUtility.tags[i]);
-            if(UnityEditorInternal.InternalEditorUtility.tags[i].Contains("player")){
-                if(GameObject.FindGameObjectsWithTag(UnityEditorInternal.InternalEditorUtility.tags[i]).Length>0){
-                    players.Add(GameObject.FindGameObjectsWithTag(UnityEditorInternal.InternalEditorUtility.tags[i])[0]);
-                }
-                
-            }
-        }
+        if(GameObject.FindGameObjectsWithTag("player").Length > 0)
+        players.Add(GameObject.FindGameObjectsWithTag("player")[0]);
+
+        if(GameObject.FindGameObjectsWithTag("player0").Length > 0)
+        players.Add(GameObject.FindGameObjectsWithTag("player0")[0]);
+
+        if(GameObject.FindGameObjectsWithTag("player1").Length > 0){
+            players.Add(GameObject.FindGameObjectsWithTag("player1")[0]);}
+
+        if(GameObject.FindGameObjectsWithTag("player2").Length > 0){
+            players.Add(GameObject.FindGameObjectsWithTag("player2")[0]);}
+
         
         foreach (GameObject player in players) {
             playerState.Add(player.GetComponent<PlayerState>());
