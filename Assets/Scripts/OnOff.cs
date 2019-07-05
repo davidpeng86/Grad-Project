@@ -6,7 +6,7 @@ public class OnOff : MonoBehaviour
 {
     public GameObject GO;
     // Start is called before the first frame update
-    bool active;
+    public bool active;
     void Start()
     {
         active = true;
