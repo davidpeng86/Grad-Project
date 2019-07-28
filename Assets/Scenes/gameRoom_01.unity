@@ -774,6 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -4886,6 +4887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -5312,6 +5314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 2100000, guid: d48e2f04d00dbf2419e0d26eabaf03c5, type: 2}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -5684,6 +5687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GO: {fileID: 1293353306}
+  active: 0
 --- !u!4 &356386110
 Transform:
   m_ObjectHideFlags: 0
@@ -7242,6 +7246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 2100000, guid: d48e2f04d00dbf2419e0d26eabaf03c5, type: 2}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -8891,6 +8896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -9010,6 +9016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 2100000, guid: d48e2f04d00dbf2419e0d26eabaf03c5, type: 2}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -13495,6 +13502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -20367,6 +20375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -22545,6 +22554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -22713,6 +22723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -26477,6 +26488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -27006,6 +27018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -28426,6 +28439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -29393,7 +29407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6adfcd600b64023a0bc3b4d7815ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 15
+  RotationX: 0
+  RotationY: 0
+  RotationZ: 0
 --- !u!4 &1721001553
 Transform:
   m_ObjectHideFlags: 0
@@ -31922,7 +31938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6adfcd600b64023a0bc3b4d7815ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 10
+  RotationX: 0
+  RotationY: 15
+  RotationZ: 0
 --- !u!4 &1829079055
 Transform:
   m_ObjectHideFlags: 0
@@ -32653,6 +32671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
@@ -33646,6 +33665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf8e7ffa453504e90cb0dc6b3fc5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg_mat: {fileID: 0}
   hpMax: 5
   currentHp: 0
   isDead: 0
