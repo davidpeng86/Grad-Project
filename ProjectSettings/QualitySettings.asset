@@ -187,7 +187,7 @@ QualitySettings:
     shadows: 1
     shadowResolution: 3
     shadowProjection: 1
-    shadowCascades: 1
+    shadowCascades: 4
     shadowDistance: 3.4028235e+38
     shadowNearPlaneOffset: 1.0715142e+20
     shadowCascade2Split: 0.33333334
@@ -196,7 +196,7 @@ QualitySettings:
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 2
-    antiAliasing: 0
+    antiAliasing: 4
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
