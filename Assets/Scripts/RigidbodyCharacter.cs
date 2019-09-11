@@ -25,8 +25,6 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public float Speed = 5f;
     public float JumpHeight = 2f;
-    public float GroundDistance = 0.2f;
-    public LayerMask Ground;
 
     private Rigidbody _body;
     private Vector3 _inputs = Vector3.zero;
