@@ -8,10 +8,11 @@ public class PlayerState : MonoBehaviour
     Material origin_mat;
     public int hpMax = 5;
     public int currentHp;
-    public bool isDead;
-    public bool win;
+    public bool isDead, isShown = false, win;
     MeshRenderer mr;
 
+    Transform blur;
+    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +21,22 @@ public class PlayerState : MonoBehaviour
         currentHp = hpMax;
         isDead = false;
         win = false;
+        blur = transform.Find("Swirl_Distortion");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isShown){
+            timer+= Time.deltaTime;
+            blur.gameObject.SetActive(true);
+            if (timer > 3)
+            {
+                isShown = false;
+                blur.gameObject.SetActive(false);
+                timer = 0;
+            }
+        }
     }
     [Range(0f,1f)]
     public float x,y;

@@ -54,9 +54,6 @@ public class RigidbodyCharacter : MonoBehaviour
         if(sword_count >= 0)
             sword_count -= (float)1/60;
 
-        print(shoot_count);
-        print(sword_count);
-
         if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
@@ -66,7 +63,7 @@ public class RigidbodyCharacter : MonoBehaviour
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
             shoot_count = shoot_CD;
-            Destroy(temp_bullet,2);
+            Destroy(temp_bullet,2.5f);
         }
 
         if(Input.GetButtonDown(sword_attack) && sword_count <= 0){

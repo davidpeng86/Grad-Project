@@ -5,9 +5,11 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject detect;
+    private Rigidbody rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,17 @@ public class bullet : MonoBehaviour
             stateChange.currentHp -= 1;
             stateChange.TakeDamage();
             Destroy(gameObject);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("ground")) {
+            
+            
+            detect.transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
+            detect.SetActive(true);
+            print("true");
+            detect.transform.parent = null;
+            rb.isKinematic = true;
+            print(collision.gameObject.name);
         }
     }
 }
