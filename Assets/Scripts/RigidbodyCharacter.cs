@@ -15,13 +15,12 @@ public class RigidbodyCharacter : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    private int shoot_CD = 1, sword_CD = 3;
+    private int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 3;
     private string horaxis;
     private string veraxis;
-    private string shoot_attack;
-    private string sword_attack;
+    private string shoot_attack, sword_attack, duplicate;
 
-    private float shoot_count = 0, sword_count = 0;
+    private float shoot_count = 0, sword_count = 0, duplicate_count = 0;
 
     public float Speed = 5f;
     public float JumpHeight = 2f;
@@ -36,6 +35,7 @@ public class RigidbodyCharacter : MonoBehaviour
         veraxis = "VerticalP" + controllernumber;
         shoot_attack = "Fire1P" + controllernumber;
         sword_attack = "Fire2P" + controllernumber;
+        duplicate = "Fire3P" + controllernumber;
 
         anim = GetComponent<Animator>();
 
@@ -53,6 +53,8 @@ public class RigidbodyCharacter : MonoBehaviour
             shoot_count -= (float)1/60;
         if(sword_count >= 0)
             sword_count -= (float)1/60;
+        if(duplicate_count >= 0)
+            duplicate_count -= (float)1/60;
 
         if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0) {
             GameObject temp_bullet =
@@ -67,7 +69,6 @@ public class RigidbodyCharacter : MonoBehaviour
         }
 
         if(Input.GetButtonDown(sword_attack) && sword_count <= 0){
-
             Collider[] colliders = Physics.OverlapSphere(transform.position, atkRadius);
             if(colliders.Length <= 0) return;
             anim.SetBool("enemy",false);
@@ -88,6 +89,10 @@ public class RigidbodyCharacter : MonoBehaviour
                 }
             }
         }
+
+        if(Input.GetButtonDown(duplicate) && duplicate_count <= 0){
+            //make prefab
+        }
     }
 
     [Range(0f,1f)]
@@ -96,6 +101,7 @@ public class RigidbodyCharacter : MonoBehaviour
     private void OnGUI() {
         GUI.Box(new Rect((x - 0.03f) * Screen.width, y * Screen.height, w, h), shoot_count.ToString("0.0"));
         GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), sword_count.ToString("0.0"));
+        GUI.Box(new Rect((x + 0.03f) * Screen.width, y * Screen.height, w, h), duplicate_count.ToString("0.0"));
     }
 
 
@@ -110,6 +116,5 @@ public class RigidbodyCharacter : MonoBehaviour
 
         _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
     }
-
 
 }

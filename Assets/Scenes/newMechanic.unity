@@ -5127,6 +5127,7 @@ MonoBehaviour:
   gunPoint: {fileID: 631254637}
   shoot_CD: 1
   sword_CD: 3
+  duplicate_CD: 3
   Speed: 5
   JumpHeight: 2
   x: 0.5
@@ -5145,7 +5146,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!23 &333918025
 MeshRenderer:
@@ -5155,7 +5156,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333918019}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -6906,6 +6907,7 @@ MonoBehaviour:
   gunPoint: {fileID: 137998917}
   shoot_CD: 1
   sword_CD: 3
+  duplicate_CD: 3
   Speed: 5
   JumpHeight: 2
   x: 0.3
@@ -6924,7 +6926,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!23 &420507359
 MeshRenderer:
@@ -8908,6 +8910,7 @@ MonoBehaviour:
   gunPoint: {fileID: 135932596}
   shoot_CD: 1
   sword_CD: 3
+  duplicate_CD: 3
   Speed: 5
   JumpHeight: 2
   x: 0.7
@@ -8926,7 +8929,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!23 &557882931
 MeshRenderer:
@@ -8936,7 +8939,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557882926}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
