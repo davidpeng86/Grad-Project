@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3225512484883953168}
   - component: {fileID: 728991035136921378}
   - component: {fileID: 6568165063578196689}
+  - component: {fileID: 8724539333657380304}
   - component: {fileID: 425200395808931008}
   m_Layer: 12
   m_Name: FakePlayer
@@ -65,7 +66,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519419432500056005}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -110,6 +111,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &8724539333657380304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519419432500056005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd5c8e7625f64dec813a21872017d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &425200395808931008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg_mat: {fileID: 2100000, guid: d48e2f04d00dbf2419e0d26eabaf03c5, type: 2}
-  hpMax: 5
+  hpMax: 1
   currentHp: 0
   isDead: 0
   isShown: 0
