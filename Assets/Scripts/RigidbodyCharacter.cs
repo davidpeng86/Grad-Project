@@ -5,6 +5,7 @@ using UnityEngine;
 public class RigidbodyCharacter : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject clone;
     public int controllernumber;
     [SerializeField]
     float shootForce = 600f;
@@ -15,7 +16,7 @@ public class RigidbodyCharacter : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    private int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 3;
+    private int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 5;
     private string horaxis;
     private string veraxis;
     private string shoot_attack, sword_attack, duplicate;
@@ -92,6 +93,10 @@ public class RigidbodyCharacter : MonoBehaviour
 
         if(Input.GetButtonDown(duplicate) && duplicate_count <= 0){
             //make prefab
+            duplicate_count = duplicate_CD;
+            GameObject fake = Instantiate(clone, transform.position+ transform.forward*2,transform.rotation);
+            fake.GetComponent<Rigidbody>().AddRelativeForce(fake.transform.forward * Speed * 2, ForceMode.Impulse);
+            Destroy(fake,2);
         }
     }
 
