@@ -16,7 +16,7 @@ public class StartSceneManager : MonoBehaviour
     void Update()
     {
         if(ps.win == true){
-            SceneManager.LoadScene("newMechanic");
+            SceneManager.LoadScene("gameRoom_01");
         }
     }
 }

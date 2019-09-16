@@ -95,8 +95,8 @@ public class RigidbodyCharacter : MonoBehaviour
             //make prefab
             duplicate_count = duplicate_CD;
             GameObject fake = Instantiate(clone, transform.position+ transform.forward*2,transform.rotation);
-            //fake.GetComponent<Rigidbody>().AddRelativeForce(fake.transform.forward * Speed * 2, ForceMode.Impulse);
-            Destroy(fake,1);
+            fake.GetComponent<Rigidbody>().AddRelativeForce(fake.transform.forward * Speed * 2, ForceMode.Impulse);
+            Destroy(fake,2);
         }
     }
 
