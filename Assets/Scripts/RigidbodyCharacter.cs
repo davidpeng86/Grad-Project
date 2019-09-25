@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class RigidbodyCharacter : MonoBehaviour
 {
@@ -114,9 +115,10 @@ public class RigidbodyCharacter : MonoBehaviour
     Vector3 newPosition = Vector3.zero;
     void FixedUpdate()
     {
-        if (_inputs != Vector3.zero)
+        if (_inputs != Vector3.zero){
             newPosition = new Vector3(_inputs.x, 0.0f, _inputs.z);
-
+            //transform.DOLookAt(newPosition*4 + transform.position, 0.3f);
+        }
         transform.LookAt(newPosition + transform.position);
 
         _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
