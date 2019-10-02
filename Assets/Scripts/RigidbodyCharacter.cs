@@ -48,8 +48,8 @@ public class RigidbodyCharacter : MonoBehaviour
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis(horaxis);
         _inputs.z = Input.GetAxis(veraxis);
-        if (_inputs != Vector3.zero)
-            transform.forward = _inputs;
+        //if (_inputs != Vector3.zero)
+        //    transform.forward = _inputs;
 
         if(shoot_count >= 0)
             shoot_count -= (float)1/60;
@@ -115,13 +115,18 @@ public class RigidbodyCharacter : MonoBehaviour
     Vector3 newPosition = Vector3.zero;
     void FixedUpdate()
     {
+        //float heading = 0;
+        
         if (_inputs != Vector3.zero){
-            newPosition = new Vector3(_inputs.x, 0.0f, _inputs.z);
-            //transform.DOLookAt(newPosition*4 + transform.position, 0.3f);
+            newPosition = Vector3.Normalize(new Vector3(_inputs.x, 0.0f, _inputs.z));
+            transform.DOLookAt(newPosition + transform.position, 0.3f);
+            //heading = Mathf.Atan2(newPosition.z, newPosition.x) * Mathf.Rad2Deg;
         }
         transform.LookAt(newPosition + transform.position);
+        //transform.rotation = Quaternion.Euler(0f, heading - 90, 0);
 
-        _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
+        //_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
+        _body.velocity = _inputs * Speed;
     }
 
 }

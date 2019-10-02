@@ -8,7 +8,7 @@ public class PlayerSpawn : MonoBehaviour
     public static bool isJoined = false;
     public string startSceneName;
 
-    List<int> unpairedCtrl = new List<int>{0,1,2,3,4};
+    List<int> unpairedCtrl = new List<int>{0,1,2,3};
     List<int> pairedCtrl = new List<int>{};
     Scene scene;
     // Start is called before the first frame update
@@ -26,35 +26,38 @@ public class PlayerSpawn : MonoBehaviour
             foreach (var i in unpairedCtrl)
             {
                 if(Input.GetButtonDown("Fire1P" + i)){
-                    playerSpawn();
+                    SpawnPlayer();
                     unpairedCtrl.Remove(i);
                     pairedCtrl.Add(i);
+                    print("paired " + pairedCtrl);
+                    print("unpaired " + unpairedCtrl);
                 }
             }
 
             //if button1(X) && controller paired
             foreach (var i in pairedCtrl)
-            {
-                if(Input.GetButtonDown("Fire1P" + i)){
-                    playerDestroy();
+            { 
+                //destroy player, controller unpaired
+                if (Input.GetButtonDown("Fire1P" + i)){
+                    DestroyPlayer();
                     pairedCtrl.Remove(i);
                     unpairedCtrl.Add(i);
+                    print("paired " + pairedCtrl);
+                    print("unpaired " + unpairedCtrl);
                 }
             }
-            
-            //destroy player, controller unpaired
-
         }
         
     }
 
-    void playerSpawn(){
+    void SpawnPlayer(){
+        return;
         //instantiate new player 
         //instantiate player UI 
         //map controllers to player & UI
     }
 
-    void playerDestroy(){
+    void DestroyPlayer(){
         
     }
 
