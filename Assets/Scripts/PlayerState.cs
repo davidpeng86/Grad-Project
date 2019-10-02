@@ -9,15 +9,14 @@ public class PlayerState : MonoBehaviour
     public int hpMax = 5;
     public int currentHp;
     public bool isDead, isShown = false, win;
-    MeshRenderer mr;
-
+    public MeshRenderer mr_head;
+    public SkinnedMeshRenderer mr_cloak;
     Transform blur;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        mr = GetComponent<MeshRenderer>();
-        origin_mat = mr.material;
+        origin_mat = mr_head.material;
         currentHp = hpMax;
         isDead = false;
         win = false;
@@ -61,14 +60,18 @@ public class PlayerState : MonoBehaviour
     }
 
     IEnumerator flash() {
-        mr.material = dmg_mat;
+        mr_head.material = dmg_mat;
+        mr_cloak.material = dmg_mat;
         for(int i = 0; i<3; i++) {
-            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             yield return new WaitForSeconds(0.05f);
-            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
             yield return new WaitForSeconds(0.05f);
         }
-        mr.material = origin_mat;
+        mr_head.material = origin_mat;
+        mr_cloak.material = origin_mat;
         yield return new WaitForSeconds(0.05f);
         if (currentHp <= 0)
         {
