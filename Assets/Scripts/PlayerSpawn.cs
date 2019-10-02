@@ -7,7 +7,11 @@ public class PlayerSpawn : MonoBehaviour
 {
     public static bool isJoined = false;
     public string startSceneName;
+    public List<GameObject> playerz = new List<GameObject>();
+    public List<GameObject> UI = new List<GameObject>();
 
+    List<LinkedPlayer> spawnedPlayers = new List<LinkedPlayer>();
+    List<PlayerState> playerState = new List<PlayerState>();
     List<int> unpairedCtrl = new List<int>{0,1,2,3};
     List<int> pairedCtrl = new List<int>{};
     Scene scene;
@@ -15,6 +19,7 @@ public class PlayerSpawn : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene();
+        
     }
 
     // Update is called once per frame
@@ -23,14 +28,13 @@ public class PlayerSpawn : MonoBehaviour
         //if in start scene
         if (scene.name == startSceneName){
             //if player press button0(A) && controller not paired yet
-            foreach (var i in unpairedCtrl)
+            foreach(var i in unpairedCtrl)
             {
                 if(Input.GetButtonDown("Fire1P" + i)){
-                    SpawnPlayer();
-                    unpairedCtrl.Remove(i);
+                    spawnedPlayers.Add(new LinkedPlayer(i,SpawnPlayer(i)));
                     pairedCtrl.Add(i);
-                    print("paired " + pairedCtrl);
-                    print("unpaired " + unpairedCtrl);
+                    unpairedCtrl.Remove(i);
+                    print("linked \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
                 }
             }
 
@@ -39,28 +43,63 @@ public class PlayerSpawn : MonoBehaviour
             { 
                 //destroy player, controller unpaired
                 if (Input.GetButtonDown("Fire1P" + i)){
-                    DestroyPlayer();
-                    pairedCtrl.Remove(i);
+                    DestroyPlayer(i);
                     unpairedCtrl.Add(i);
-                    print("paired " + pairedCtrl);
-                    print("unpaired " + unpairedCtrl);
+                    pairedCtrl.Remove(i);
+                    print("unlink \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
                 }
             }
         }
+
+        foreach(var i in spawnedPlayers){
+            TrackPlayerState(i.player);
+        }
+        Winner();
         
     }
 
-    void SpawnPlayer(){
-        return;
+    GameObject SpawnPlayer(int i){
+        GameObject spawnee = Instantiate(playerz[i]);
+        return spawnee;
         //instantiate new player 
         //instantiate player UI 
         //map controllers to player & UI
     }
 
-    void DestroyPlayer(){
-        
+    void DestroyPlayer(int j){
+        for(int i = 0; i < spawnedPlayers.Count; i++){
+            if(j == spawnedPlayers[i].controllerNum){
+                Destroy(spawnedPlayers[i].player);
+                spawnedPlayers.Remove(spawnedPlayers[i]);
+                return;
+            }
+        }
     }
 
+    void TrackPlayerState(GameObject player){
+        playerState.Add(player.GetComponent<PlayerState>());
+    }
+
+    void Winner(){
+        for (int i = 0; i < playerState.Count; i++) {
+            if(playerState.Count <= 1){
+                playerState[i].win = true;
+            }
+            if(playerState[i].isDead == true){
+                playerState.Remove(playerState[i]);
+            }
+        }
+    }
     //distrbute UI in another manager
+
+}
+
+public class LinkedPlayer{
+    public int controllerNum;
+    public GameObject player;
+    public LinkedPlayer(int i, GameObject p){
+        controllerNum = i;
+        player = p;
+    }
 
 }

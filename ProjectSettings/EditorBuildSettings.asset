@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/startMenu.unity
     guid: c664ce887e30f4462b04f2a83685a145
   - enabled: 1
-    path: Assets/Scenes/gameRoom_01.unity
-    guid: b95124952f2a7e841a8a37737a566921
+    path: Assets/Scenes/newMechanic.unity
+    guid: d1c4767b29aa34279880e2b026312a9e
   m_configObjects: {}

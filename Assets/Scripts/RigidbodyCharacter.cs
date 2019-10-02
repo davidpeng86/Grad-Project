@@ -87,7 +87,6 @@ public class RigidbodyCharacter : MonoBehaviour
                         ps.currentHp -= 3;
                         ps.TakeDamage();
                     }
-                    print(colliders[i].gameObject.name);
                 }
             }
         }

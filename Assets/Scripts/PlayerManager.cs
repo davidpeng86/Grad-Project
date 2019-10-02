@@ -12,17 +12,17 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GameObject.FindGameObjectsWithTag("player").Length > 0)
-        players.Add(GameObject.FindGameObjectsWithTag("player")[0]);
-
         if(GameObject.FindGameObjectsWithTag("player0").Length > 0)
-        players.Add(GameObject.FindGameObjectsWithTag("player0")[0]);
+            players.Add(GameObject.FindGameObjectsWithTag("player0")[0]);
 
         if(GameObject.FindGameObjectsWithTag("player1").Length > 0){
             players.Add(GameObject.FindGameObjectsWithTag("player1")[0]);}
 
         if(GameObject.FindGameObjectsWithTag("player2").Length > 0){
             players.Add(GameObject.FindGameObjectsWithTag("player2")[0]);}
+        
+        if(GameObject.FindGameObjectsWithTag("player3").Length > 0)
+            players.Add(GameObject.FindGameObjectsWithTag("player3")[0]);
 
         
         foreach (GameObject player in players) {

@@ -4,19 +4,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartSceneManager : MonoBehaviour
 {
-    public GameObject player;
+    List<GameObject> players = new List<GameObject>();
+    public GameObject play;
     PlayerState ps;
     // Start is called before the first frame update
     void Start()
     {
-        ps = player.GetComponent<PlayerState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ps.win == true){
+        
+        // for(int i = 0; i < players.Count; i++){
+        //     if(players[i].GetComponent<PlayerState>().win == true){
+        //         SceneManager.LoadScene("newMechanic");
+        //     }
+        // }
+        if(play == null)
             SceneManager.LoadScene("newMechanic");
-        }
+        
     }
 }
