@@ -16,13 +16,13 @@ public class RigidbodyCharacter : MonoBehaviour
     GameObject gunPoint;
     Animator anim;
 
-    [SerializeField]
-    private int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 5;
+    public int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 5;
     private string horaxis;
     private string veraxis;
     private string shoot_attack, sword_attack, duplicate;
 
-    private float shoot_count = 0, sword_count = 0, duplicate_count = 0;
+    [HideInInspector]
+    public float shoot_count = 0, sword_count = 0, duplicate_count = 0;
 
     public float Speed = 5f;
     public float JumpHeight = 2f;
