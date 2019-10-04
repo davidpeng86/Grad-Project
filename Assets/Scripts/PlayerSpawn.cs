@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSpawn : MonoBehaviour
 {
+    public GameObject UIcanvas;
+    public GameObject UIPrefab;
     public static bool isJoined = false;
     public string startSceneName;
     public List<GameObject> playerz = new List<GameObject>();
@@ -19,34 +21,37 @@ public class PlayerSpawn : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene();
-        
+        if (scene.name != startSceneName){
+            PlaceUI();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //if in start scene
         if (scene.name == startSceneName){
             //if player press button0(A) && controller not paired yet
-            foreach(var i in unpairedCtrl)
-            {
-                if(Input.GetButtonDown("Fire1P" + i)){
-                    spawnedPlayers.Add(new LinkedPlayer(i,SpawnPlayer(i)));
-                    pairedCtrl.Add(i);
-                    unpairedCtrl.Remove(i);
+            for (int i = 0; i < unpairedCtrl.Count; i++){
+                if(Input.GetButtonDown("Fire1P" + unpairedCtrl[i])){
+                    int controller = unpairedCtrl[i];
+                    LinkedPlayer newBorn = new LinkedPlayer(controller,SpawnPlayer(controller));
+                    spawnedPlayers.Add(newBorn);
+                    PairUI(newBorn);
+                    PairCtrl(controller);
+                    PlaceUI();
                     print("linked \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
+                    return;
                 }
             }
 
             //if button1(X) && controller paired
-            foreach (var i in pairedCtrl)
-            { 
-                //destroy player, controller unpaired
-                if (Input.GetButtonDown("Fire1P" + i)){
-                    DestroyPlayer(i);
-                    unpairedCtrl.Add(i);
-                    pairedCtrl.Remove(i);
+            for (int i = 0; i < pairedCtrl.Count; i++){
+                if (Input.GetButtonDown("Fire1P" + pairedCtrl[i])){
+                    int controller = pairedCtrl[i];
+                    DestroyUI(controller);
+                    DestroyPlayer(controller);
+                    UnpairCtrl(controller);
                     print("unlink \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
+                    return;
                 }
             }
         }
@@ -61,9 +66,20 @@ public class PlayerSpawn : MonoBehaviour
     GameObject SpawnPlayer(int i){
         GameObject spawnee = Instantiate(playerz[i]);
         return spawnee;
-        //instantiate new player 
-        //instantiate player UI 
+        //instantiate player UI
         //map controllers to player & UI
+    }
+
+    void PairCtrl(int i){
+        pairedCtrl.Add(i);
+        if(unpairedCtrl.Count != 0)
+            unpairedCtrl.Remove(i);
+    }
+
+    void UnpairCtrl(int i){
+        unpairedCtrl.Add(i);
+        if(pairedCtrl.Count != 0)
+            pairedCtrl.Remove(i);
     }
 
     void DestroyPlayer(int j){
@@ -71,7 +87,15 @@ public class PlayerSpawn : MonoBehaviour
             if(j == spawnedPlayers[i].controllerNum){
                 Destroy(spawnedPlayers[i].player);
                 spawnedPlayers.Remove(spawnedPlayers[i]);
-                return;
+            }
+        }
+    }
+
+    void DestroyUI(int j){
+        for(int i = 0; i < UI.Count; i++){
+            if(UI[i].GetComponent<player1ui>().myplayer.GetComponent<RigidbodyCharacter>().controllernumber == j){
+                Destroy(UI[i]);
+                UI.RemoveAt(i);
             }
         }
     }
@@ -91,7 +115,31 @@ public class PlayerSpawn : MonoBehaviour
         }
     }
     //distrbute UI in another manager
+    void PairUI(LinkedPlayer linkedPlayer){
+        GameObject spawnUI = Instantiate(UIPrefab);
+        spawnUI.GetComponent<player1ui>().myplayer = linkedPlayer.player;
+        spawnUI.transform.parent = UIcanvas.transform;
+        spawnUI.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        UI.Add(spawnUI);
+    }
 
+    void PlaceUI(){
+        switch(UI.Count){
+            case 0:
+                break;
+            case 1:
+                UI[0].transform.position = new Vector3(Screen.width/2, 50, 0);
+                break;
+            case 2:
+                UI[0].transform.position = new Vector3(Screen.width/3, 50, 0);
+                UI[1].transform.position = new Vector3(2*Screen.width/3, 50, 0);
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
+    }
 }
 
 public class LinkedPlayer{

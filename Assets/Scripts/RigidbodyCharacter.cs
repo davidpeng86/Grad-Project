@@ -94,8 +94,7 @@ public class RigidbodyCharacter : MonoBehaviour
         if(Input.GetButtonDown(duplicate) && duplicate_count <= 0){
             //make prefab
             duplicate_count = duplicate_CD;
-            GameObject fake = Instantiate(clone, transform.position+ transform.forward*2,transform.rotation);
-            //fake.GetComponent<Rigidbody>().AddRelativeForce(fake.transform.forward * Speed * 2, ForceMode.Impulse);
+            GameObject fake = Instantiate(clone, transform.position + transform.forward,transform.rotation);
             Destroy(fake,1);
         }
     }
@@ -114,12 +113,9 @@ public class RigidbodyCharacter : MonoBehaviour
     Vector3 newPosition = Vector3.zero;
     void FixedUpdate()
     {
-        //float heading = 0;
-        
         if (_inputs != Vector3.zero){
             newPosition = Vector3.Normalize(new Vector3(_inputs.x, 0.0f, _inputs.z));
             transform.DOLookAt(newPosition + transform.position, 0.3f);
-            //heading = Mathf.Atan2(newPosition.z, newPosition.x) * Mathf.Rad2Deg;
         }
         transform.LookAt(newPosition + transform.position);
         //transform.rotation = Quaternion.Euler(0f, heading - 90, 0);

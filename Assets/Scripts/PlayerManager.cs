@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 public class PlayerManager : MonoBehaviour
 {
+
     List<GameObject> players = new List<GameObject>();
     List<PlayerState> playerState = new List<PlayerState>();
 
@@ -12,6 +13,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         if(GameObject.FindGameObjectsWithTag("player0").Length > 0)
             players.Add(GameObject.FindGameObjectsWithTag("player0")[0]);
 

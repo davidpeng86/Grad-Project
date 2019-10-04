@@ -8,7 +8,7 @@ public class player1ui : MonoBehaviour
     public Image sword;
     public Image shadow;
     public GameObject myplayer;
-    public int playerid;
+    // public int playerid;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -17,13 +17,13 @@ public class player1ui : MonoBehaviour
     void Start()
     {
         RigidbodyCharacter[] players = FindObjectsOfType(typeof(RigidbodyCharacter)) as RigidbodyCharacter[];
-        foreach (RigidbodyCharacter player in players)
-        {
-            if (playerid == player.GetComponent<RigidbodyCharacter>().controllernumber)
-            {
-                myplayer = player.gameObject;
-            }
-        }
+        // foreach (RigidbodyCharacter player in players)
+        // {
+        //     if (playerid == player.GetComponent<RigidbodyCharacter>().controllernumber)
+        //     {
+        //         myplayer = player.gameObject;
+        //     }
+        // }
     }
 
     // Update is called once per frame
