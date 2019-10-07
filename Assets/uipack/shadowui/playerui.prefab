@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c910a281fbcf26247a967bfdc006ed0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 269704059245014445}
   hpbar: {fileID: 269704059100826532}
   sword: {fileID: 269704059157561275}
   shadow: {fileID: 269704060441564641}
-  myplayer: {fileID: 0}
 --- !u!1 &269704059043141170
 GameObject:
   m_ObjectHideFlags: 0

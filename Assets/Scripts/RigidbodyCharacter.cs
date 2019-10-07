@@ -13,7 +13,7 @@ public class RigidbodyCharacter : MonoBehaviour
     [SerializeField]
     float atkRadius = 2f;
     [SerializeField]
-    GameObject gunPoint;
+    GameObject gunPoint = null;
     Animator anim;
 
     public int shoot_CD = 1, sword_CD = 3 ,duplicate_CD = 5;

@@ -48,6 +48,7 @@ public class PlayerSpawn : MonoBehaviour
                 if (Input.GetButtonDown("Fire1P" + pairedCtrl[i])){
                     int controller = pairedCtrl[i];
                     DestroyUI(controller);
+                    PlaceUI();
                     DestroyPlayer(controller);
                     UnpairCtrl(controller);
                     print("unlink \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
@@ -93,7 +94,7 @@ public class PlayerSpawn : MonoBehaviour
 
     void DestroyUI(int j){
         for(int i = 0; i < UI.Count; i++){
-            if(UI[i].GetComponent<player1ui>().myplayer.GetComponent<RigidbodyCharacter>().controllernumber == j){
+            if(UI[i].GetComponent<player1ui>().myplayer.controllerNum == j){
                 Destroy(UI[i]);
                 UI.RemoveAt(i);
             }
@@ -117,7 +118,7 @@ public class PlayerSpawn : MonoBehaviour
     //distrbute UI in another manager
     void PairUI(LinkedPlayer linkedPlayer){
         GameObject spawnUI = Instantiate(UIPrefab);
-        spawnUI.GetComponent<player1ui>().myplayer = linkedPlayer.player;
+        spawnUI.GetComponent<player1ui>().myplayer = linkedPlayer;
         spawnUI.transform.parent = UIcanvas.transform;
         spawnUI.transform.localScale = new Vector3(0.5f, 0.5f, 1);
         UI.Add(spawnUI);
@@ -139,6 +140,11 @@ public class PlayerSpawn : MonoBehaviour
             case 4:
                 break;
         }
+    }
+
+    void MatchUIColor() {
+
+
     }
 }
 

@@ -18,6 +18,6 @@ public class CloneMovement : MonoBehaviour
     }
      void FixedUpdate()
     {
-        body.MovePosition(body.position + transform.forward * 5f * Time.fixedDeltaTime);
+        body.velocity = transform.forward * 5f ;
     }
 }

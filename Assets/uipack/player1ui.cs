@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class player1ui : MonoBehaviour
 {
+    public Image background;
     public Image hpbar;
     public Image sword;
     public Image shadow;
-    public GameObject myplayer;
+    public LinkedPlayer myplayer;
+
+    GameObject obj;
     // public int playerid;
     // Start is called before the first frame update
     private void Awake()
     {
 
+        obj = myplayer.player;
     }
     void Start()
     {
@@ -21,7 +25,7 @@ public class player1ui : MonoBehaviour
         // {
         //     if (playerid == player.GetComponent<RigidbodyCharacter>().controllernumber)
         //     {
-        //         myplayer = player.gameObject;
+        //         obj = player.gameObject;
         //     }
         // }
     }
@@ -31,9 +35,17 @@ public class player1ui : MonoBehaviour
     {
         if (myplayer != null)
         {
-            hpbar.fillAmount = (float)myplayer.GetComponent<PlayerState>().currentHp / (float)myplayer.GetComponent<PlayerState>().hpMax;
-            sword.fillAmount = (myplayer.GetComponent<RigidbodyCharacter>().sword_CD - myplayer.GetComponent<RigidbodyCharacter>().sword_count) / myplayer.GetComponent<RigidbodyCharacter>().sword_CD;
-            shadow.fillAmount = (myplayer.GetComponent<RigidbodyCharacter>().duplicate_CD - myplayer.GetComponent<RigidbodyCharacter>().duplicate_count) / myplayer.GetComponent<RigidbodyCharacter>().duplicate_CD;
+            hpbar.fillAmount = (float)obj.GetComponent<PlayerState>().currentHp / (float)obj.GetComponent<PlayerState>().hpMax;
+            sword.fillAmount = (obj.GetComponent<RigidbodyCharacter>().sword_CD - obj.GetComponent<RigidbodyCharacter>().sword_count) / obj.GetComponent<RigidbodyCharacter>().sword_CD;
+            shadow.fillAmount = (obj.GetComponent<RigidbodyCharacter>().duplicate_CD - obj.GetComponent<RigidbodyCharacter>().duplicate_count) / obj.GetComponent<RigidbodyCharacter>().duplicate_CD;
         }
+    }
+
+    public void setColor() {
+        background.color = Color.red;
+        shadow.color = Color.red;
+        sword.color = Color.red;
+
+
     }
 }
