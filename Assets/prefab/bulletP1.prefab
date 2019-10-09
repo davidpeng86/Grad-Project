@@ -4897,7 +4897,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -4954,7 +4954,7 @@ GameObject:
   - component: {fileID: 54161624937973036}
   - component: {fileID: 8477884468417302826}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: bulletP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

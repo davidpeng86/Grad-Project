@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: dc5171e618ec63043b77368ab4e13099, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7c5ad70fc8506bc488475ced46acb8f7, type: 3}
   m_ShaderKeywords: FL_CASTSHADOW_ON FL_COLORS_WORLD FL_MAIN_TEXTURE FL_RECEIVESHADOWS
     FL_SYMETRIC_COLORS_ON TCP2_DISABLE_WRAPPED_LIGHT TCP2_SPEC_TOON TCP2_ZSMOOTH_ON
   m_LightmapFlags: 4
@@ -137,6 +137,7 @@ Material:
     - _Shininess: 2
     - _SketchHalftoneMax: 0
     - _SketchHalftoneMin: 0.338
+    - _SketchSpeed: 6
     - _SmoothnessTextureChannel: 0
     - _SpecBlend: 0
     - _SpecSmooth: 0
@@ -172,7 +173,7 @@ Material:
     - _FoamSpeed: {r: 2, g: 2, b: 2, a: 2}
     - _GradienColorGoal: {r: 1, g: 1, b: 1, a: 1}
     - _GradientUnitAxis: {r: 0, g: 1, b: 0, a: 0}
-    - _HColor: {r: 1, g: 0, b: 0, a: 0}
+    - _HColor: {r: 1, g: 0.042452812, b: 0.042452812, a: 0}
     - _LightNegative2X: {r: 1, g: 1, b: 1, a: 1}
     - _LightNegative2Y: {r: 1, g: 1, b: 1, a: 1}
     - _LightNegative2Z: {r: 1, g: 1, b: 1, a: 1}

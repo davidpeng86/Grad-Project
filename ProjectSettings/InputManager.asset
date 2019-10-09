@@ -307,7 +307,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 8
+    axis: 10
     joyNum: 2
   - serializedVersion: 3
     m_Name: VerticalP1
@@ -321,9 +321,9 @@ InputManager:
     dead: 0.2
     sensitivity: 100
     snap: 1
-    invert: 0
+    invert: 1
     type: 2
-    axis: 9
+    axis: 11
     joyNum: 2
   - serializedVersion: 3
     m_Name: Fire1P1
@@ -467,8 +467,8 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 8
-    joyNum: 3
+    axis: 10
+    joyNum: 1
   - serializedVersion: 3
     m_Name: VerticalP3
     descriptiveName: 
@@ -481,10 +481,10 @@ InputManager:
     dead: 0.2
     sensitivity: 100
     snap: 1
-    invert: 0
+    invert: 1
     type: 2
-    axis: 9
-    joyNum: 3
+    axis: 11
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Fire1P3
     descriptiveName: 
@@ -492,7 +492,7 @@ InputManager:
     negativeButton: 
     positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick 3 button 1
+    altPositiveButton: joystick 1 button 1
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -500,7 +500,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 3
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Fire2P3
     descriptiveName: 
@@ -508,7 +508,7 @@ InputManager:
     negativeButton: 
     positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick 3 button 2
+    altPositiveButton: joystick 1 button 2
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -516,7 +516,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 3
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Fire3P3
     descriptiveName: 
@@ -524,7 +524,7 @@ InputManager:
     negativeButton: 
     positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick 3 button 3
+    altPositiveButton: joystick 1 button 3
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -532,4 +532,4 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 3
+    joyNum: 1
