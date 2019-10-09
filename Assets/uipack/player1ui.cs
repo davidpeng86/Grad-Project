@@ -15,8 +15,6 @@ public class player1ui : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
-        obj = myplayer.player;
     }
     void Start()
     {
@@ -28,9 +26,10 @@ public class player1ui : MonoBehaviour
         //         obj = player.gameObject;
         //     }
         // }
+        
+        obj = myplayer.player;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (myplayer != null)
@@ -41,11 +40,9 @@ public class player1ui : MonoBehaviour
         }
     }
 
-    public void setColor() {
-        background.color = Color.red;
-        shadow.color = Color.red;
-        sword.color = Color.red;
-
-
+    public void setColor(Color col) {
+        background.color = col;
+        shadow.color = col;
+        sword.color = col;
     }
 }

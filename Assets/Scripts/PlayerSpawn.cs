@@ -35,7 +35,8 @@ public class PlayerSpawn : MonoBehaviour
                     int controller = unpairedCtrl[i];
                     LinkedPlayer newBorn = new LinkedPlayer(controller,SpawnPlayer(controller));
                     spawnedPlayers.Add(newBorn);
-                    PairUI(newBorn);
+                    GameObject UI = PairUI(newBorn);
+                    MatchUIColor(UI);
                     PairCtrl(controller);
                     PlaceUI();
                     print("linked \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
@@ -116,12 +117,13 @@ public class PlayerSpawn : MonoBehaviour
         }
     }
     //distrbute UI in another manager
-    void PairUI(LinkedPlayer linkedPlayer){
+    GameObject PairUI(LinkedPlayer linkedPlayer){
         GameObject spawnUI = Instantiate(UIPrefab);
         spawnUI.GetComponent<player1ui>().myplayer = linkedPlayer;
         spawnUI.transform.parent = UIcanvas.transform;
         spawnUI.transform.localScale = new Vector3(0.5f, 0.5f, 1);
         UI.Add(spawnUI);
+        return spawnUI;
     }
 
     void PlaceUI(){
@@ -142,9 +144,22 @@ public class PlayerSpawn : MonoBehaviour
         }
     }
 
-    void MatchUIColor() {
-
-
+    void MatchUIColor(GameObject gameObject) {
+        player1ui playerUI = gameObject.GetComponent<player1ui>();
+        switch (playerUI.myplayer.controllerNum){
+            case 0:
+                playerUI.setColor(new Color(125f/255f,1,0,1));
+                break;
+            case 1:
+                playerUI.setColor(new Color(1,134f/255f,134f/255f,1));
+                break;
+            case 2:
+                playerUI.setColor(new Color(60f/255f,70f/255f,1,1));
+                break;
+            case 3:
+                playerUI.setColor(new Color(200f/255f,0,1,1));
+                break;
+        }
     }
 }
 
