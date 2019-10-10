@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Root: {fileID: 3851319342895050338}
   m_UpdateRate: 60
   m_UpdateMode: 0
-  m_Damping: 0.08
+  m_Damping: 0
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve:
@@ -151,12 +151,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.05
+  m_Elasticity: 0.03
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1980629
       value: 0
       inSlope: 0
       outSlope: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.69677734
       value: 1
       inSlope: 0
       outSlope: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.2
+  m_Stiffness: 0.07
   m_StiffnessDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -197,7 +197,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_EndLength: 0
+  m_EndLength: 7.75
   m_EndOffset: {x: 0, y: 0, z: 0}
   m_Gravity: {x: 0, y: 0, z: 0}
   m_Force: {x: 0, y: 0, z: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4946402797402733051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 

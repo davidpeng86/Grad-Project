@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Root: {fileID: 3276895305235521680}
   m_UpdateRate: 60
   m_UpdateMode: 0
-  m_Damping: 0.08
+  m_Damping: 0.15
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve:
@@ -40,12 +40,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.05
+  m_Elasticity: 0.4
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1980629
       value: 0
       inSlope: 0
       outSlope: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.69677734
       value: 1
       inSlope: 0
       outSlope: 0
@@ -65,14 +65,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.2
+  m_Stiffness: 0.08
   m_StiffnessDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.2
+  m_Inert: 0.13
   m_InertDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_EndLength: 0
+  m_EndLength: 7
   m_EndOffset: {x: 0, y: 0, z: 0}
   m_Gravity: {x: 0, y: 0, z: 0}
   m_Force: {x: 0, y: 0, z: 0}
@@ -521,7 +521,7 @@ MonoBehaviour:
   bullet: {fileID: 1140768831008158, guid: b5f826f9584f2394690b0fb778b08116, type: 3}
   clone: {fileID: 519419432500056005, guid: e75a5d1a40be648d6abec275013ecd68, type: 3}
   controllernumber: 1
-  shootForce: 600
+  shootForce: 800
   atkRadius: 2
   gunPoint: {fileID: 3276895306213185553}
   shoot_CD: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6030955702496865334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
@@ -688,10 +688,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
-      propertyPath: m_CastShadows
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -740,10 +736,6 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 400078, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.988
-      objectReference: {fileID: 0}
     - target: {fileID: 400036, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.13270444
@@ -759,6 +751,14 @@ PrefabInstance:
     - target: {fileID: 400036, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.051782746
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
+      propertyPath: m_CastShadows
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}

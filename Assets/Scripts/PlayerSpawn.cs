@@ -12,17 +12,28 @@ public class PlayerSpawn : MonoBehaviour
     public List<GameObject> playerz = new List<GameObject>();
     public List<GameObject> UI = new List<GameObject>();
 
-    List<LinkedPlayer> spawnedPlayers = new List<LinkedPlayer>();
+    public static List<LinkedPlayer> spawnedPlayers = new List<LinkedPlayer>();
     List<PlayerState> playerState = new List<PlayerState>();
     List<int> unpairedCtrl = new List<int>{0,1,2,3};
     List<int> pairedCtrl = new List<int>{};
     Scene scene;
+
+    void Awake(){
+    }
     // Start is called before the first frame update
     void Start()
     {
         scene = SceneManager.GetActiveScene();
         if (scene.name != startSceneName){
-            PlaceUI();
+            for(int i = 0; i <spawnedPlayers.Count; i++){
+                int j = spawnedPlayers[i].controllerNum;
+                print(j);
+                spawnedPlayers[i].player = SpawnPlayer(j);
+                GameObject UI = PairUI(spawnedPlayers[i]);
+                MatchUIColor(UI);
+                PlaceUI();
+                
+            }
         }
     }
 
@@ -39,6 +50,7 @@ public class PlayerSpawn : MonoBehaviour
                     MatchUIColor(UI);
                     PairCtrl(controller);
                     PlaceUI();
+
                     print("linked \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
                     return;
                 }
@@ -58,15 +70,18 @@ public class PlayerSpawn : MonoBehaviour
             }
         }
 
+    }
+
+    void LateUpdate(){
         foreach(var i in spawnedPlayers){
             TrackPlayerState(i.player);
         }
         Winner();
-        
     }
 
     GameObject SpawnPlayer(int i){
         GameObject spawnee = Instantiate(playerz[i]);
+        spawnee.transform.parent = this.transform;
         return spawnee;
         //instantiate player UI
         //map controllers to player & UI
@@ -116,12 +131,12 @@ public class PlayerSpawn : MonoBehaviour
             }
         }
     }
-    //distrbute UI in another manager
+
     GameObject PairUI(LinkedPlayer linkedPlayer){
         GameObject spawnUI = Instantiate(UIPrefab);
         spawnUI.GetComponent<player1ui>().myplayer = linkedPlayer;
         spawnUI.transform.parent = UIcanvas.transform;
-        spawnUI.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        spawnUI.transform.localScale = new Vector3(0.3f, 0.3f, 1);
         UI.Add(spawnUI);
         return spawnUI;
     }
@@ -138,8 +153,15 @@ public class PlayerSpawn : MonoBehaviour
                 UI[1].transform.position = new Vector3(2*Screen.width/3, 50, 0);
                 break;
             case 3:
+                UI[0].transform.position = new Vector3(Screen.width/4, 50, 0);
+                UI[1].transform.position = new Vector3(2*Screen.width/4, 50, 0);
+                UI[2].transform.position = new Vector3(3*Screen.width/4, 50, 0);
                 break;
             case 4:
+                UI[0].transform.position = new Vector3(Screen.width/5, 50, 0);
+                UI[1].transform.position = new Vector3(2*Screen.width/5, 50, 0);
+                UI[2].transform.position = new Vector3(3*Screen.width/5, 50, 0);
+                UI[3].transform.position = new Vector3(4*Screen.width/5, 50, 0);
                 break;
         }
     }

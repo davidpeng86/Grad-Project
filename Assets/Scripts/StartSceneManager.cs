@@ -15,12 +15,6 @@ public class StartSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // for(int i = 0; i < players.Count; i++){
-        //     if(players[i].GetComponent<PlayerState>().win == true){
-        //         SceneManager.LoadScene("newMechanic");
-        //     }
-        // }
         if(play == null)
             SceneManager.LoadScene("newMechanic");
         
