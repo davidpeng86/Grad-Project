@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LowPolyWaterMaterial
-  m_Shader: {fileID: 4800000, guid: 8bc4e62ea9d964448a2c2e539d65b77a, type: 3}
+  m_Shader: {fileID: 4800000, guid: dc5171e618ec63043b77368ab4e13099, type: 3}
   m_ShaderKeywords: FL_CASTSHADOW_ON FL_COLORS_WORLD FL_GRADIENT_WORLD FL_MAIN_TEXTURE
     FL_SYMETRIC_COLORS_OFF _EMISSION _USAGESTAGE_PIXEL _USAGETYPE_LIGHT
   m_LightmapFlags: 1
@@ -84,10 +84,6 @@ Material:
         m_Texture: {fileID: 2800000, guid: b8ee765cdb8ae36418ae3c43f81c94e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Mask1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Mask2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -158,7 +154,6 @@ Material:
     - _BlendedLightSmoothness: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DepthDistance: 0.5
     - _DetailNormalMapScale: 1
     - _Displacement: 0.27863377
     - _DisplacementTiling: 18.586807
@@ -255,10 +250,10 @@ Material:
     - _Displacement: {r: 6.6371665, g: 20.353983, b: -1, a: -0.681416}
     - _DisplacementXz: {r: 0.6499999, g: -2.9203715, b: 1.6599998, a: -3.9363046}
     - _DistortParams: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0.9150943, g: 0.33236912, b: 0.33236912, a: 0}
+    - _EmissionColor: {r: 1, g: 0.58046615, b: 0.36320752, a: 0}
     - _Extinction: {r: 4.5, g: 75, b: 300, a: 1}
     - _Foam: {r: 40, g: 2.68, b: 0, a: 0}
-    - _FoamColor: {r: 0.7924528, g: 0.02616591, b: 0.02616591, a: 1}
+    - _FoamColor: {r: 1, g: 0.9103774, b: 0.9103774, a: 1}
     - _FoamSpeed: {r: 2, g: 2, b: 2, a: 2}
     - _FoamWaveParams: {r: 0, g: 0.24918434, b: 3.3395782, a: 1}
     - _Fresnel_ST: {r: 1, g: 1, b: 0, a: 0}
