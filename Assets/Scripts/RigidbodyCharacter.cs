@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 public class RigidbodyCharacter : MonoBehaviour
 {
@@ -48,8 +47,6 @@ public class RigidbodyCharacter : MonoBehaviour
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis(horaxis);
         _inputs.z = Input.GetAxis(veraxis);
-        //if (_inputs != Vector3.zero)
-        //    transform.forward = _inputs;
 
         if(shoot_count >= 0)
             shoot_count -= (float)1/60;
@@ -115,12 +112,8 @@ public class RigidbodyCharacter : MonoBehaviour
     {
         if (_inputs != Vector3.zero){
             newPosition = Vector3.Normalize(new Vector3(_inputs.x, 0.0f, _inputs.z));
-            transform.DOLookAt(newPosition + transform.position, 0.3f);
         }
         transform.LookAt(newPosition + transform.position);
-        //transform.rotation = Quaternion.Euler(0f, heading - 90, 0);
-
-        //_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
         _body.velocity = _inputs * Speed;
     }
 

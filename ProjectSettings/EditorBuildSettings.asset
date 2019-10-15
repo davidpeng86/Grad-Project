@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/startMenu.unity
     guid: c664ce887e30f4462b04f2a83685a145
   - enabled: 1
-    path: Assets/Scenes/newBlank.unity
-    guid: d1c4767b29aa34279880e2b026312a9e
+    path: Assets/Scenes/newMechanic.unity
+    guid: c851269d9d7b1e448aedc8ccb2322961
+  - enabled: 1
+    path: Assets/Scenes/Lava.unity
+    guid: 3402dd610e9594e8caec8920ca21bcf7
   m_configObjects: {}

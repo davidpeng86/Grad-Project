@@ -83,8 +83,6 @@ public class PlayerSpawn : MonoBehaviour
         GameObject spawnee = Instantiate(playerz[i]);
         spawnee.transform.parent = this.transform;
         return spawnee;
-        //instantiate player UI
-        //map controllers to player & UI
     }
 
     void PairCtrl(int i){

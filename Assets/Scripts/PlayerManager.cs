@@ -10,11 +10,13 @@ public class PlayerManager : MonoBehaviour
     List<PlayerState> playerState = new List<PlayerState>();
 
     GameObject[] empty = Array.Empty<GameObject>();
-    // Start is called before the first frame update
+
+    public GameObject winUI, spotLight = null;
+    public Light mainLight;
+
+    bool spotlightLit = false, isWin = false;
     void Start()
     {
-
-
         if(GameObject.FindGameObjectsWithTag("player0").Length > 0)
             players.Add(GameObject.FindGameObjectsWithTag("player0")[0]);
 
@@ -36,13 +38,39 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //mainLight.range -= 10f / 180f;
         for (int i = 0; i < playerState.Count; i++) {
-            if(playerState.Count <= 1){
+            if(playerState.Count <= 1 && !isWin ){
                 playerState[i].win = true;
+                spotLight.transform.position = new Vector3(playerState[i].transform.position.x,spotLight.transform.position.y, playerState[i].transform.position.z);
+                spotLight.transform.parent = playerState[i].transform;
+                //spotLight.SetActive(true);
+                spotlightLit = true;    
             }
             if(playerState[i].isDead == true){
                 playerState.Remove(playerState[i]);
             }
         }
+
+        if (spotlightLit) {
+            isWin = true;
+            print("isLit");
+            spotlightLit = false;
+            StartCoroutine(WinnerSpotlight());
+        }
+    }
+
+    void ShowWinScreen() {
+        winUI.SetActive(true);
+    }
+
+    IEnumerator WinnerSpotlight() {
+        for (int i = 0; i < 3 * 60; i++)
+        {
+            mainLight.range -= 10f / 180f;
+            spotLight.GetComponent<Light>().spotAngle += 30f / 180f;
+            yield return new WaitForFixedUpdate();
+        }
+        ShowWinScreen();
     }
 }
