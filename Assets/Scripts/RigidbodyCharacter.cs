@@ -24,7 +24,6 @@ public class RigidbodyCharacter : MonoBehaviour
     public float shoot_count = 0, sword_count = 0, duplicate_count = 0;
 
     public float Speed = 5f;
-    public float JumpHeight = 2f;
 
     private Rigidbody _body;
     private Vector3 _inputs = Vector3.zero;
@@ -96,15 +95,6 @@ public class RigidbodyCharacter : MonoBehaviour
             GameObject fake = Instantiate(clone, transform.position + transform.forward,transform.rotation);
             Destroy(fake,1);
         }
-    }
-
-    [Range(0f,1f)]
-    public float x,y;
-    int w = 40,h = 20;
-    private void OnGUI() {
-        GUI.Box(new Rect((x - 0.03f) * Screen.width, y * Screen.height, w, h), shoot_count.ToString("0.0"));
-        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), sword_count.ToString("0.0"));
-        GUI.Box(new Rect((x + 0.03f) * Screen.width, y * Screen.height, w, h), duplicate_count.ToString("0.0"));
     }
 
 

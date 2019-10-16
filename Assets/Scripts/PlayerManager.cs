@@ -8,9 +8,6 @@ public class PlayerManager : MonoBehaviour
 
     List<GameObject> players = new List<GameObject>();
     List<PlayerState> playerState = new List<PlayerState>();
-
-    GameObject[] empty = Array.Empty<GameObject>();
-
     public GameObject winUI, spotLight = null;
     public Light mainLight;
 
@@ -67,7 +64,7 @@ public class PlayerManager : MonoBehaviour
     IEnumerator WinnerSpotlight() {
         for (int i = 0; i < 3 * 60; i++)
         {
-            mainLight.range -= 10f / 180f;
+            mainLight.spotAngle -= 99f / 180f;
             spotLight.GetComponent<Light>().spotAngle += 30f / 180f;
             yield return new WaitForFixedUpdate();
         }

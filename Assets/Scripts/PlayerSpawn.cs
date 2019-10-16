@@ -7,7 +7,6 @@ public class PlayerSpawn : MonoBehaviour
 {
     public GameObject UIcanvas;
     public GameObject UIPrefab;
-    public static bool isJoined = false;
     public string startSceneName;
     public List<GameObject> playerz = new List<GameObject>();
     public List<GameObject> UI = new List<GameObject>();
@@ -18,11 +17,8 @@ public class PlayerSpawn : MonoBehaviour
     List<int> pairedCtrl = new List<int>{};
     Scene scene;
 
-    void Awake(){
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Awake()
+    { 
         scene = SceneManager.GetActiveScene();
         if (scene.name != startSceneName){
             for(int i = 0; i <spawnedPlayers.Count; i++){
