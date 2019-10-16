@@ -81,7 +81,6 @@ public class PlayerSpawn : MonoBehaviour
 
     GameObject SpawnPlayer(int i){
         GameObject spawnee = Instantiate(playerz[i]);
-        spawnee.transform.parent = this.transform;
         return spawnee;
     }
 
@@ -116,6 +115,7 @@ public class PlayerSpawn : MonoBehaviour
     }
 
     void TrackPlayerState(GameObject player){
+        if(player!=null)
         playerState.Add(player.GetComponent<PlayerState>());
     }
 

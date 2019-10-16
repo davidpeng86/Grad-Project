@@ -76,7 +76,7 @@ public class RigidbodyCharacter : MonoBehaviour
 
             colliders = Physics.OverlapSphere(transform.position, atkRadius);
             for (int i = 0; i < colliders.Length; i++){
-                if (colliders[i].transform.root != transform){
+                if (colliders[i].transform.root != transform.root){
                     if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player"))
                     {
                         anim.SetBool("enemy",true);
@@ -84,6 +84,8 @@ public class RigidbodyCharacter : MonoBehaviour
                         ps.currentHp -= 3;
                         ps.TakeDamage();
                     }
+
+                    print(colliders[i].gameObject.name);
                 }
             }
         }

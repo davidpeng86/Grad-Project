@@ -56,24 +56,27 @@ public class PlayerState : MonoBehaviour
     }
 
     public void TakeDamage() {
-        StartCoroutine(flash());
+        if(!win)
+            StartCoroutine(flash());
     }
 
     IEnumerator flash() {
-        mr_head.material = dmg_mat;
-        mr_cloak.material = dmg_mat;
-        for(int i = 0; i<3; i++) {
-            mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-            mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-            yield return new WaitForSeconds(0.05f);
-            mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-            mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-            yield return new WaitForSeconds(0.05f);
+        if(mr_cloak != null){
+            mr_head.material = dmg_mat;
+            mr_cloak.material = dmg_mat;
+            for(int i = 0; i<3; i++) {
+                mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                yield return new WaitForSeconds(0.05f);
+                mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                yield return new WaitForSeconds(0.05f);
+            }
+            mr_head.material = origin_mat;
+            mr_cloak.material = origin_mat;
         }
-        mr_head.material = origin_mat;
-        mr_cloak.material = origin_mat;
         yield return new WaitForSeconds(0.05f);
-        if (currentHp <= 0 && !win)
+        if (currentHp <= 0)
         {
             isDead = true;
             Destroy(gameObject);
