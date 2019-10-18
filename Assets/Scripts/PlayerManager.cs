@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour
     IEnumerator WinnerSpotlight() {
         for (int i = 0; i < 3 * 60; i++)
         {
-            mainLight.spotAngle -= 99f / 180f;
+            mainLight.spotAngle -= 79f / 180f;
             spotLight.GetComponent<Light>().spotAngle += 30f / 180f;
             yield return new WaitForFixedUpdate();
         }

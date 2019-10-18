@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4017711328616297894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.75, y: 0.5, z: -3.29}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4017711328898935099}
   - {fileID: 4017711329474278914}
@@ -60,7 +60,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.6}
+  m_Size: {x: 0.4, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4017711328616297891
 Rigidbody:
@@ -93,7 +93,7 @@ MonoBehaviour:
   bullet: {fileID: 1140768831008158, guid: 0d3e59adec975824e8a67bc45b249c54, type: 3}
   clone: {fileID: 519419432500056005, guid: e75a5d1a40be648d6abec275013ecd68, type: 3}
   controllernumber: 0
-  shootForce: 800
+  shootForce: 1200
   atkRadius: 2
   gunPoint: {fileID: 4017711328898935096}
   shoot_CD: 1
@@ -103,9 +103,6 @@ MonoBehaviour:
   sword_count: 0
   duplicate_count: 0
   Speed: 5
-  JumpHeight: 2
-  x: 0.3
-  y: 0.85
 --- !u!114 &4017711328616297881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +123,7 @@ MonoBehaviour:
   win: 0
   mr_head: {fileID: 4017711329451484284}
   mr_cloak: {fileID: 4017711329467348924}
+  dmgFX: {fileID: 1475590606714312842, guid: 9f582e07b20a84b5ea8a14e2a0ef8377, type: 3}
   x: 0.25
   y: 0.9
   w: 100
@@ -242,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4017711328898935096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4017711328616297887}
@@ -442,7 +440,7 @@ Transform:
   m_GameObject: {fileID: 4017711329474278915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.8, z: 0.2}
+  m_LocalScale: {x: 0.15, y: 0.5, z: 0.15}
   m_Children:
   - {fileID: 4017711329364377614}
   - {fileID: 4017711329626170161}

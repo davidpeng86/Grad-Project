@@ -11,6 +11,8 @@ public class PlayerState : MonoBehaviour
     public bool isDead, isShown = false, win;
     public MeshRenderer mr_head;
     public SkinnedMeshRenderer mr_cloak;
+    public GameObject dmgFX;
+
     Transform blur;
     float timer = 0;
     // Start is called before the first frame update
@@ -61,6 +63,9 @@ public class PlayerState : MonoBehaviour
     }
 
     IEnumerator flash() {
+        GameObject effect = Instantiate(dmgFX,transform);
+        effect.GetComponent<ParticleSystemRenderer>().material = dmg_mat;
+        Destroy(effect,0.5f);
         if(mr_cloak != null){
             mr_head.material = dmg_mat;
             mr_cloak.material = dmg_mat;
