@@ -35,7 +35,6 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //mainLight.range -= 10f / 180f;
         for (int i = 0; i < playerState.Count; i++) {
             if(playerState.Count <= 1 && !isWin ){
                 playerState[i].win = true;

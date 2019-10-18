@@ -54,6 +54,13 @@ public class RigidbodyCharacter : MonoBehaviour
         if(duplicate_count >= 0)
             duplicate_count -= (float)1/60;
 
+        if(Input.GetButtonDown(duplicate) && duplicate_count <= 0){
+            //make prefab
+            duplicate_count = duplicate_CD;
+            GameObject fake = Instantiate(clone, transform.position + transform.forward,transform.rotation);
+            Destroy(fake,1);
+        }
+
         if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0) {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
@@ -63,7 +70,7 @@ public class RigidbodyCharacter : MonoBehaviour
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
             shoot_count = shoot_CD;
-            Destroy(temp_bullet,2.5f);
+            Destroy(temp_bullet,3f);
         }
 
         if(Input.GetButtonDown(sword_attack) && sword_count <= 0){
@@ -80,20 +87,14 @@ public class RigidbodyCharacter : MonoBehaviour
                     {
                         anim.SetBool("enemy",true);
                         PlayerState ps = colliders[i].GetComponent<PlayerState>();
-                        ps.currentHp -= 3;
+                        if(!ps.win)
+                            ps.currentHp -= 3;
                         ps.TakeDamage();
                     }
 
                     print(colliders[i].gameObject.name);
                 }
             }
-        }
-
-        if(Input.GetButtonDown(duplicate) && duplicate_count <= 0){
-            //make prefab
-            duplicate_count = duplicate_CD;
-            GameObject fake = Instantiate(clone, transform.position + transform.forward,transform.rotation);
-            Destroy(fake,1);
         }
     }
 

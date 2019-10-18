@@ -76,7 +76,7 @@ public class PlayerState : MonoBehaviour
             mr_cloak.material = origin_mat;
         }
         yield return new WaitForSeconds(0.05f);
-        if (currentHp <= 0)
+        if (currentHp <= 0 && !win)
         {
             isDead = true;
             Destroy(gameObject);
