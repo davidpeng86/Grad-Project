@@ -32,6 +32,7 @@ public class bullet : MonoBehaviour
             detect.SetActive(true);
             detect.transform.parent = null;
             rb.isKinematic = true;
+            Destroy(gameObject);
         }
     }
 }

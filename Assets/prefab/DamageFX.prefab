@@ -1608,7 +1608,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2088,15 +2088,15 @@ ParticleSystem:
         m_RotationOrder: 4
     radial:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 1
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 0.97297287
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2104,13 +2104,22 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
+          time: 0.5734454
+          value: 0.32870376
+          inSlope: -4.457187
+          outSlope: -4.457187
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
+          outWeight: 0.14402021
+        - serializedVersion: 3
+          time: 1
+          value: -1
+          inSlope: -0.00000082694726
+          outSlope: -0.00000082694726
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33692825
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2141,7 +2150,7 @@ ParticleSystem:
         m_RotationOrder: 4
     speedModifier:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -2158,12 +2167,12 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: -1
+          inSlope: -1.5043968
+          outSlope: -1.5043968
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.1077922
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
