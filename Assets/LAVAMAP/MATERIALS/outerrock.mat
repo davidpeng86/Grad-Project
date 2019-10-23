@@ -168,5 +168,5 @@ Material:
     - _RimColor: {r: 1, g: 0.99134624, b: 0.6367924, a: 0.6}
     - _SColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowTint: {r: 1, g: 1, b: 1, a: 1}
-    - _SketchColor: {r: 0.3301887, g: 0.216651, b: 0.11058207, a: 1}
+    - _SketchColor: {r: 0.5283019, g: 0.1802233, b: 0.14702742, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

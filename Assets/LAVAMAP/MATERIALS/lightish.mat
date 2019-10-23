@@ -147,7 +147,7 @@ Material:
     - _Ambient_Light: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightIntensities: {r: 0, g: 1, b: 0, a: 0}
-    - _Color: {r: 0.990566, g: 0.7132438, b: 0.54668033, a: 1}
+    - _Color: {r: 0.46226418, g: 0.20511156, b: 0.06323426, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradienColorGoal: {r: 1, g: 1, b: 1, a: 1}
     - _GradientUnitAxis: {r: 0, g: 1, b: 0, a: 0}

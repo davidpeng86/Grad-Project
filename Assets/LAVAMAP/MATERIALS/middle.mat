@@ -147,7 +147,7 @@ Material:
     - _Ambient_Light: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightIntensities: {r: 0, g: 1, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.7756708, b: 0.6367924, a: 1}
+    - _Color: {r: 0.46226418, g: 0.20511156, b: 0.06323426, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradienColorGoal: {r: 1, g: 1, b: 1, a: 1}
     - _GradientUnitAxis: {r: 0, g: 1, b: 0, a: 0}
@@ -168,5 +168,5 @@ Material:
     - _RimColor: {r: 1, g: 0.99134624, b: 0.6367924, a: 0.6}
     - _SColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowTint: {r: 1, g: 1, b: 1, a: 1}
-    - _SketchColor: {r: 0.6415094, g: 0.38455692, b: 0.13616946, a: 1}
+    - _SketchColor: {r: 0.36862746, g: 0.2509804, b: 0.13725491, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

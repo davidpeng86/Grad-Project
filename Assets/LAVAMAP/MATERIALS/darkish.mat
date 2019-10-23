@@ -147,11 +147,11 @@ Material:
     - _Ambient_Light: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlendedLightIntensities: {r: 0, g: 1, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.8343148, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradienColorGoal: {r: 1, g: 1, b: 1, a: 1}
     - _GradientUnitAxis: {r: 0, g: 1, b: 0, a: 0}
-    - _HColor: {r: 1, g: 0, b: 0.18401527, a: 0}
+    - _HColor: {r: 0.5943396, g: 0.19448988, b: 0, a: 0}
     - _LightNegative2X: {r: 1, g: 1, b: 1, a: 1}
     - _LightNegative2Y: {r: 1, g: 1, b: 1, a: 1}
     - _LightNegative2Z: {r: 1, g: 1, b: 1, a: 1}
@@ -168,5 +168,5 @@ Material:
     - _RimColor: {r: 1, g: 0.99134624, b: 0.6367924, a: 0.6}
     - _SColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowTint: {r: 1, g: 1, b: 1, a: 1}
-    - _SketchColor: {r: 0.7176471, g: 0.3137255, b: 0.67885125, a: 1}
+    - _SketchColor: {r: 0.2924528, g: 0.14865807, b: 0.009656467, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

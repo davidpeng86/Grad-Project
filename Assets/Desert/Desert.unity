@@ -1013,7 +1013,7 @@ PrefabInstance:
     - target: {fileID: 7569380992976679249, guid: 1cd057ac7b5c83748913f3c2119cc3f4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569380992976679248, guid: 1cd057ac7b5c83748913f3c2119cc3f4,
         type: 3}
@@ -1053,7 +1053,7 @@ PrefabInstance:
     - target: {fileID: 7569380992976679248, guid: 1cd057ac7b5c83748913f3c2119cc3f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7569380992976679248, guid: 1cd057ac7b5c83748913f3c2119cc3f4,
         type: 3}
@@ -1756,7 +1756,7 @@ Transform:
   - {fileID: 1834358918}
   - {fileID: 1528860033}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &242926281
 MonoBehaviour:
@@ -3639,7 +3639,7 @@ Transform:
   - {fileID: 887647178}
   - {fileID: 268753039}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623562403
 GameObject:
@@ -7089,9 +7089,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0
+    m_NormalBias: 0.11
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -8859,7 +8859,7 @@ PrefabInstance:
     - target: {fileID: 4017711328616297887, guid: 0f3537fd363c37f408cf2802872e52ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4017711328616297887, guid: 0f3537fd363c37f408cf2802872e52ca,
         type: 3}
