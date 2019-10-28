@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DesertPillarMaterial 1
   m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
-  m_ShaderKeywords: TCP2_RAMPTEXT TCP2_STYLIZED_FRESNEL _SPECULARHIGHLIGHTS_OFF
+  m_ShaderKeywords: TCP2_RAMPTEXT TCP2_STYLIZED_FRESNEL _EMISSION _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9970afe9aad1aab498bfb44c868803b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -98,7 +98,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.8207547, g: 0.7985506, b: 0.7704254, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.42352942, g: 0.3372549, b: 0.10980392, a: 1}
     - _HColor: {r: 0.8431373, g: 0.7960785, b: 0.73333335, a: 1}
     - _OutlineColor: {r: 0.7830189, g: 0.6800358, b: 0.49123356, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
