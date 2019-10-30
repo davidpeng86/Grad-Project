@@ -648,6 +648,7 @@ MonoBehaviour:
   mr_head: {fileID: 3276895305233097272}
   mr_cloak: {fileID: 3276895305230086648}
   dmgFX: {fileID: 1475590606714312842, guid: 9f582e07b20a84b5ea8a14e2a0ef8377, type: 3}
+  blurMat: {fileID: 2100000, guid: 00809a023ab67a94282345466af4f5dd, type: 2}
   x: 0.45
   y: 0.9
   w: 100
@@ -782,10 +783,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
-      propertyPath: m_CastShadows
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -831,6 +828,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
+      propertyPath: m_CastShadows
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 349924644169eb54db0ceabcf0582a34, type: 3}
       propertyPath: m_CastShadows
       value: 3
       objectReference: {fileID: 0}

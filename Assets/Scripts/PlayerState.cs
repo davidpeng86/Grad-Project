@@ -12,8 +12,7 @@ public class PlayerState : MonoBehaviour
     public MeshRenderer mr_head;
     public SkinnedMeshRenderer mr_cloak;
     public GameObject dmgFX;
-
-    Transform blur;
+    public Material blurMat;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
@@ -22,23 +21,33 @@ public class PlayerState : MonoBehaviour
         currentHp = hpMax;
         isDead = false;
         win = false;
-        blur = transform.Find("Swirl_Distortion");
     }
 
     // Update is called once per frame
     void Update()
     {
         if(isShown){
-            timer+= Time.deltaTime;
-            blur.gameObject.SetActive(true);
-            if (timer > 3)
-            {
-                isShown = false;
-                blur.gameObject.SetActive(false);
-                timer = 0;
-            }
+            StartCoroutine(showInvis());
+            isShown = false;
         }
     }
+
+    IEnumerator showInvis() {
+        if (mr_cloak != null)
+        {
+            mr_head.material = blurMat;
+            mr_cloak.material = blurMat;
+
+            mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        }
+        yield return new WaitForSeconds(3);
+        mr_head.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        mr_cloak.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        mr_head.material = origin_mat;
+        mr_cloak.material = origin_mat;
+    }
+
     [Range(0f,1f)]
     public float x,y;
     public int w;

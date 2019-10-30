@@ -79,7 +79,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DissolveAmount: 0.3
+    - _DissolveAmount: 0
     - _DissolveGradientWidth: 0.2
     - _DissolveValue: 0.5
     - _DstBlend: 0
