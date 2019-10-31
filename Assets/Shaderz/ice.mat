@@ -69,14 +69,24 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+<<<<<<< HEAD
     - _Spread: 0.065
+=======
+    - _Spread: 0.5
+>>>>>>> c56c2f3b4b37ec7202ac4201fa85c0e9313126c3
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
+<<<<<<< HEAD
     - _position: 1.48
     m_Colors:
     - _Albedo: {r: 0.47049654, g: 0.7791734, b: 0.9150943, a: 1}
+=======
+    - _position: 1.69
+    m_Colors:
+    - _Albedo: {r: 0.19824673, g: 0.6100287, b: 0.764151, a: 1}
+>>>>>>> c56c2f3b4b37ec7202ac4201fa85c0e9313126c3
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _snow: {r: 1, g: 1, b: 1, a: 1}
