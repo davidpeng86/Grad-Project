@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: rock_snow_02
   m_Shader: {fileID: 4800000, guid: d8dc5b44f974a407888d976711c36e82, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _HEIGHTFOGCOLOR
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -63,8 +63,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeightFogEnd: 0
-    - _HeightFogStart: 0
+    - _HeightFogEnd: 0.66
+    - _HeightFogStart: -0.96
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -77,4 +77,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.8113208, g: 0.775077, b: 0.72330016, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HeightFogColor: {r: 0, g: 0, b: 0, a: 0}
+    - _HeightFogColor: {r: 0.3254902, g: 0.33333334, b: 0.2901961, a: 1}

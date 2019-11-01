@@ -61,7 +61,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Glossiness: 1
-    - _HeightFogEnd: -4.5
+    - _HeightFogEnd: 1.27
     - _HeightFogStart: 13.7
     - _Metallic: 0.62
     - _Mode: 0

@@ -10,7 +10,7 @@ Material:
   m_Name: StylizedWater
   m_Shader: {fileID: 4800000, guid: 4a91c9577c91733478297518e0cb57ed, type: 3}
   m_ShaderKeywords: _SECONDARYFOAMALWAYSVISIBLE_ON _SHADOWS_ON
-  m_LightmapFlags: 0
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -45,12 +45,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
-    - _FresnelExp: 3.8983047
+    - _FresnelExp: 0.76
     - _GradientPosition1: 2.3328786
     - _GradientPosition2: 2.5
-    - _LightColorIntensity: 0.84
-    - _MainFoamIntensity: 11
-    - _MainFoamOpacity: 0.16
+    - _LightColorIntensity: 0.083
+    - _MainFoamIntensity: 51.6
+    - _MainFoamOpacity: 0.875
     - _MainFoamScale: 85.04
     - _MainFoamSpeed: 0.2
     - _Opacity: 0.33
@@ -58,10 +58,10 @@ Material:
     - _RealTimeReflection: 1
     - _ReflectionsIntensity: 1.33
     - _RefractionIntensity: 1.71
-    - _Roughness: 0.316
+    - _Roughness: 0.01
     - _SecondaryFoamAlwaysVisible: 0
-    - _SecondaryFoamIntensity: 3.8
-    - _SecondaryFoamOpacity: 1
+    - _SecondaryFoamIntensity: -9.4
+    - _SecondaryFoamOpacity: 0.458
     - _SecondaryFoamScale: 57.01
     - _ShadowIntensity: 1
     - _Shadows: 1
@@ -72,13 +72,13 @@ Material:
     - _VertexOffset: 1
     - _WaveDistortionIntensity: 0.59
     - _WavesAmplitude: 3.74
-    - _WavesDirection: 100.7
+    - _WavesDirection: 93.3
     - _WavesIntensity: 1.97
     - _WavesSpeed: 2
     m_Colors:
-    - _DepthGradient1: {r: 0.4156863, g: 0.6392157, b: 0.9058824, a: 1}
-    - _DepthGradient2: {r: 0, g: 0.13307908, b: 0.3207547, a: 1}
-    - _DepthGradient3: {r: 0.017409164, g: 0.04984338, b: 0.16911763, a: 1}
+    - _DepthGradient1: {r: 0.41515663, g: 0.6392157, b: 0.9058824, a: 1}
+    - _DepthGradient2: {r: 0, g: 0.13257703, b: 0.32022503, a: 1}
+    - _DepthGradient3: {r: 0.017409164, g: 0.049478583, b: 0.16861558, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FresnelColor: {r: 0.46431112, g: 0.62501967, b: 0.8867924, a: 1}
+    - _FresnelColor: {r: 0.5918476, g: 0.6907904, b: 0.7169812, a: 1}
     - _ShadowColor: {r: 0.009191178, g: 0.033871744, b: 0.125, a: 1}
