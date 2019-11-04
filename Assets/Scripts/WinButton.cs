@@ -18,7 +18,7 @@ public class WinButton : MonoBehaviour
     }
 
     public void ExitButton() {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("tutorial");
     }
 
     public void NextScene() {

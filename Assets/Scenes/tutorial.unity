@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3981,6 +3981,25 @@ Transform:
   m_Father: {fileID: 1484026148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &547858480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5101195099033241155, guid: 62a1da9181d7142e1838c2249d101458,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144373284158306588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &547858485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03300d7fc3db941fcacbc932a62c32c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: {fileID: 879436795}
 --- !u!1 &617405913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,7 +4566,8 @@ MonoBehaviour:
   win: 0
   mr_head: {fileID: 879436797}
   mr_cloak: {fileID: 0}
-  dmgFX: {fileID: 0}
+  dmgFX: {fileID: 1475590606714312842, guid: 9f582e07b20a84b5ea8a14e2a0ef8377, type: 3}
+  blurMat: {fileID: 0}
   x: 0
   y: 0
   w: 0
@@ -4632,7 +4652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 35.264, y: 0, z: 0}
 --- !u!1 &1015209377
 GameObject:
@@ -6922,6 +6942,7 @@ MonoBehaviour:
   mr_head: {fileID: 0}
   mr_cloak: {fileID: 0}
   dmgFX: {fileID: 0}
+  blurMat: {fileID: 0}
   x: 0
   y: 0
   w: 0
@@ -7280,6 +7301,31 @@ PrefabInstance:
     - target: {fileID: 5144373283845605338, guid: 62a1da9181d7142e1838c2249d101458,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144373283845605337, guid: 62a1da9181d7142e1838c2249d101458,
+        type: 3}
+      propertyPath: startSceneName
+      value: tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101195099033241158, guid: 62a1da9181d7142e1838c2249d101458,
+        type: 3}
+      propertyPath: startSceneName
+      value: tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101195099033241157, guid: 62a1da9181d7142e1838c2249d101458,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101195099033241156, guid: 62a1da9181d7142e1838c2249d101458,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101195099663577803, guid: 62a1da9181d7142e1838c2249d101458,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

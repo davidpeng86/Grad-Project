@@ -19,24 +19,21 @@ public class player1ui : MonoBehaviour
     void Start()
     {
         RigidbodyCharacter[] players = FindObjectsOfType(typeof(RigidbodyCharacter)) as RigidbodyCharacter[];
-        // foreach (RigidbodyCharacter player in players)
-        // {
-        //     if (playerid == player.GetComponent<RigidbodyCharacter>().controllernumber)
-        //     {
-        //         obj = player.gameObject;
-        //     }
-        // }
-        
         obj = myplayer.player;
     }
 
     void Update()
     {
-        if (myplayer != null)
+        if (obj != null)
         {
             hpbar.fillAmount = (float)obj.GetComponent<PlayerState>().currentHp / (float)obj.GetComponent<PlayerState>().hpMax;
             sword.fillAmount = (obj.GetComponent<RigidbodyCharacter>().sword_CD - obj.GetComponent<RigidbodyCharacter>().sword_count) / obj.GetComponent<RigidbodyCharacter>().sword_CD;
             shadow.fillAmount = (obj.GetComponent<RigidbodyCharacter>().duplicate_CD - obj.GetComponent<RigidbodyCharacter>().duplicate_count) / obj.GetComponent<RigidbodyCharacter>().duplicate_CD;
+        }
+        else {
+            background.color = Color.gray;
+            sword.color = Color.gray;
+            shadow.color = Color.gray;
         }
     }
 

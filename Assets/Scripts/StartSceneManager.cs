@@ -16,7 +16,7 @@ public class StartSceneManager : MonoBehaviour
     void Update()
     {
         if(play == null)
-            SceneManager.LoadScene("newMechanic");
+            SceneManager.LoadScene("Desert");
         
     }
 }
