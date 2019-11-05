@@ -10,7 +10,7 @@ Material:
   m_Name: LavaWave
   m_Shader: {fileID: 4800000, guid: ce6ca749c2f6a3543a52a13eeac9fe39, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -83,5 +83,9 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _BallColor: {r: 0.96078426, g: 0.24799794, b: 0.11372539, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 0.38207546, b: 0.6066027, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseColor: {r: 0.6509434, g: 0.40332955, b: 0, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
