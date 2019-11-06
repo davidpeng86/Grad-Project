@@ -65,7 +65,7 @@ Material:
     - _GlossyReflections: 1
     - _HeightFogEnd: 4.8
     - _HeightFogStart: -3.12
-    - _Metallic: 0
+    - _Metallic: 0.054
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -75,6 +75,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    - _Color: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HeightFogColor: {r: 0.41509432, g: 0.05831231, b: 0.009789959, a: 0.39215687}
+    - _HeightFogColor: {r: 1, g: 0.40784314, b: 0.11372549, a: 0.39215687}

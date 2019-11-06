@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LavaBackMaterial
+  m_Name: LavaConeUpMaterial
   m_Shader: {fileID: 4800000, guid: d8dc5b44f974a407888d976711c36e82, type: 3}
   m_ShaderKeywords: _HEIGHTFOGCOLOR
   m_LightmapFlags: 5
@@ -63,8 +63,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _HeightFogEnd: 0.59
-    - _HeightFogStart: -2.51
+    - _HeightFogEnd: 9.11
+    - _HeightFogStart: -6.61
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -75,6 +75,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    - _Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HeightFogColor: {r: 1, g: 0.40784314, b: 0.11372549, a: 0.39215687}
