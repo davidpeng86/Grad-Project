@@ -65,10 +65,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
+    - _Constract: 0.334
+    - _Contrast: 0.32
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DistortionScale: 4.67
     - _DstBlend: 0
-    - _Float0: 0
+    - _Float0: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -76,16 +79,23 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power: 2.58
+    - _RollSpeed: 0.81
+    - _ShieldDistortion: 0.03
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WaveSpeed: 0.02
+    - _X_RollSpeed: 1
+    - _Y_RollSpeed: -1
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     m_Colors:
-    - _BallColor: {r: 0.96078426, g: 0.24799791, b: 0.11372536, a: 1}
+    - _BallColor: {r: 0.98077375, g: 0.48755184, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0.38207546, b: 0.6066027, a: 1}
+    - _ConstractColor: {r: 1, g: 0.56931657, b: 0.315, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _NoiseColor: {r: 0.6509434, g: 0.40332955, b: 0, a: 1}
+    - _NoiseColor: {r: 0.9339623, g: 0.4390485, b: 0.20705767, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
