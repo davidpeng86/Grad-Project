@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 0ff19d11187f3e44a8e699bd0ce581d6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: RigCageL1
+    100004: RigCageL10
+    100006: RigCageL2
+    100008: RigCageL3
+    100010: RigCageL4
+    100012: RigCageL5
+    100014: RigCageL6
+    100016: RigCageL7
+    100018: RigCageL8
+    100020: RigCageL9
+    100022: RigCageR1
+    100024: RigCageR10
+    100026: RigCageR2
+    100028: RigCageR3
+    100030: RigCageR4
+    100032: RigCageR5
+    100034: RigCageR6
+    100036: RigCageR7
+    100038: RigCageR8
+    100040: RigCageR9
+    400000: //RootNode
+    400002: RigCageL1
+    400004: RigCageL10
+    400006: RigCageL2
+    400008: RigCageL3
+    400010: RigCageL4
+    400012: RigCageL5
+    400014: RigCageL6
+    400016: RigCageL7
+    400018: RigCageL8
+    400020: RigCageL9
+    400022: RigCageR1
+    400024: RigCageR10
+    400026: RigCageR2
+    400028: RigCageR3
+    400030: RigCageR4
+    400032: RigCageR5
+    400034: RigCageR6
+    400036: RigCageR7
+    400038: RigCageR8
+    400040: RigCageR9
+    2100000: default
+    2300000: //RootNode
+    2300002: RigCageL1
+    2300004: RigCageL10
+    2300006: RigCageL2
+    2300008: RigCageL3
+    2300010: RigCageL4
+    2300012: RigCageL5
+    2300014: RigCageL6
+    2300016: RigCageL7
+    2300018: RigCageL8
+    2300020: RigCageL9
+    2300022: RigCageR1
+    2300024: RigCageR10
+    2300026: RigCageR2
+    2300028: RigCageR3
+    2300030: RigCageR4
+    2300032: RigCageR5
+    2300034: RigCageR6
+    2300036: RigCageR7
+    2300038: RigCageR8
+    2300040: RigCageR9
+    3300000: //RootNode
+    3300002: RigCageL1
+    3300004: RigCageL10
+    3300006: RigCageL2
+    3300008: RigCageL3
+    3300010: RigCageL4
+    3300012: RigCageL5
+    3300014: RigCageL6
+    3300016: RigCageL7
+    3300018: RigCageL8
+    3300020: RigCageL9
+    3300022: RigCageR1
+    3300024: RigCageR10
+    3300026: RigCageR2
+    3300028: RigCageR3
+    3300030: RigCageR4
+    3300032: RigCageR5
+    3300034: RigCageR6
+    3300036: RigCageR7
+    3300038: RigCageR8
+    3300040: RigCageR9
+    4300000: RigCage
+    4300002: RigCageL1
+    4300004: RigCageL2
+    4300006: RigCageL3
+    4300008: RigCageL4
+    4300010: RigCageL5
+    4300012: RigCageL6
+    4300014: RigCageL7
+    4300016: RigCageL8
+    4300018: RigCageL9
+    4300020: RigCageL10
+    4300022: RigCageR1
+    4300024: RigCageR2
+    4300026: RigCageR3
+    4300028: RigCageR4
+    4300030: RigCageR5
+    4300032: RigCageR6
+    4300034: RigCageR7
+    4300036: RigCageR8
+    4300038: RigCageR9
+    4300040: RigCageR10
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default
+    second: {fileID: 2100000, guid: 9d12f5215bd68724e8ea3519165a65b4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

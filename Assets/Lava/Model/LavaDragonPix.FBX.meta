@@ -1,18 +1,37 @@
 fileFormatVersion: 2
-guid: c0cf1985d9456944aa625e312edb7b76
+guid: 8f5b34a93afd4774dab5c2549f7db624
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Group15989
+    100000: Angle
     100002: //RootNode
-    400000: Group15989
+    100004: Skull
+    100006: SkullBot
+    100008: Tooth
+    400000: Angle
     400002: //RootNode
-    2100000: Group15989Mat
-    2300000: Group15989
-    3300000: Group15989
-    4300000: Group15989
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+    400004: Skull
+    400006: SkullBot
+    400008: Tooth
+    2100000: default
+    2300000: Angle
+    2300002: Skull
+    2300004: SkullBot
+    2300006: Tooth
+    3300000: Angle
+    3300002: Skull
+    3300004: SkullBot
+    3300006: Tooth
+    4300000: Angle
+    4300002: Skull
+    4300004: SkullBot
+    4300006: Tooth
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default
+    second: {fileID: 2100000, guid: fd570c85ef6db614782be81937b2d514, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
