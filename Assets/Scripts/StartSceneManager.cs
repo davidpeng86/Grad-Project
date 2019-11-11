@@ -6,17 +6,26 @@ public class StartSceneManager : MonoBehaviour
 {
     List<GameObject> players = new List<GameObject>();
     public GameObject play;
-    PlayerState ps;
+    PlayerSpawn playerSpawn;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        playerSpawn = GetComponent<PlayerSpawn>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(play == null)
-            SceneManager.LoadScene("Desert");
+        if (play == null) {
+            if (playerSpawn.UI.Count > 1) {
+                SceneManager.LoadScene("Desert");
+            }
+            else
+                print("needs more players");
+        }
+            
+        
         
     }
 }

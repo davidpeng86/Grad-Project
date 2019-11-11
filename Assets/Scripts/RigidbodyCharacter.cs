@@ -28,6 +28,7 @@ public class RigidbodyCharacter : MonoBehaviour
     private Rigidbody _body;
     private Vector3 _inputs = Vector3.zero;
 
+    PlayerSpawn playerSpawn;
     void Start()
     {
         _body = GetComponent<Rigidbody>();
@@ -38,6 +39,8 @@ public class RigidbodyCharacter : MonoBehaviour
         duplicate = "Fire3P" + controllernumber;
 
         anim = GetComponent<Animator>();
+
+        playerSpawn = GameObject.Find("Managers").GetComponent<PlayerSpawn>();
 
     }
 
@@ -61,7 +64,9 @@ public class RigidbodyCharacter : MonoBehaviour
             Destroy(fake,1);
         }
 
-        if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0) {
+        
+        if (Input.GetButtonDown(shoot_attack) && gunPoint != null && shoot_count <= 0)
+        {
             GameObject temp_bullet =
                 Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation);
             temp_bullet.tag = this.tag;
@@ -70,29 +75,35 @@ public class RigidbodyCharacter : MonoBehaviour
             Rigidbody temp_rigidbody = temp_bullet.GetComponent<Rigidbody>();
             temp_rigidbody.AddRelativeForce(Vector3.down * shootForce);
             shoot_count = shoot_CD;
-            Destroy(temp_bullet,3f);
+            Destroy(temp_bullet, 3f);
         }
 
-        if(Input.GetButtonDown(sword_attack) && sword_count <= 0){
+        if (Input.GetButtonDown(sword_attack) && sword_count <= 0)
+        {
             Collider[] colliders = Physics.OverlapSphere(transform.position, atkRadius);
-            if(colliders.Length <= 0) return;
-            anim.SetBool("enemy",false);
+            if (colliders.Length <= 0) return;
+            anim.SetBool("enemy", false);
             anim.SetTrigger("attack");
             sword_count = sword_CD;
 
-            colliders = Physics.OverlapSphere(transform.position, atkRadius);
-            for (int i = 0; i < colliders.Length; i++){
-                if (colliders[i].transform.root != transform.root){
-                    if(colliders[i].gameObject.layer == LayerMask.NameToLayer("player"))
+            if (playerSpawn.UI.Count > 1)
+            {
+                colliders = Physics.OverlapSphere(transform.position, atkRadius);
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].transform.root != transform.root)
                     {
-                        anim.SetBool("enemy",true);
-                        PlayerState ps = colliders[i].GetComponent<PlayerState>();
-                        if(!ps.win)
-                            ps.currentHp -= 3;
-                        ps.TakeDamage();
-                    }
+                        if (colliders[i].gameObject.layer == LayerMask.NameToLayer("player"))
+                        {
+                            anim.SetBool("enemy", true);
+                            PlayerState ps = colliders[i].GetComponent<PlayerState>();
+                            if (!ps.win)
+                                ps.currentHp -= 3;
+                            ps.TakeDamage();
+                        }
 
-                    print(colliders[i].gameObject.name);
+                        print(colliders[i].gameObject.name);
+                    }
                 }
             }
         }

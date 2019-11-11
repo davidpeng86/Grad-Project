@@ -13,7 +13,7 @@ public class PlayerState : MonoBehaviour
     public SkinnedMeshRenderer mr_cloak;
     public GameObject dmgFX;
     public Material blurMat;
-    float timer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,23 +48,23 @@ public class PlayerState : MonoBehaviour
         mr_cloak.material = origin_mat;
     }
 
-    [Range(0f,1f)]
-    public float x,y;
-    public int w;
-    public int h;
+    //[Range(0f,1f)]
+    //public float x,y;
+    //public int w;
+    //public int h;
 
-    private void OnGUI()
-    {
-        string state = "";
-        for (int i = 0; i < currentHp; i++) {
-            if (currentHp < 1) {
-                state = "dead";
-                break;
-            }
-            state += "Ｏ ";
-        }
-        GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), state);
-    }
+    //private void OnGUI()
+    //{
+    //    string state = "";
+    //    for (int i = 0; i < currentHp; i++) {
+    //        if (currentHp < 1) {
+    //            state = "dead";
+    //            break;
+    //        }
+    //        state += "Ｏ ";
+    //    }
+    //    GUI.Box(new Rect(x * Screen.width, y * Screen.height, w, h), state);
+    //}
 
     public void TakeDamage() {
         if(!win)
