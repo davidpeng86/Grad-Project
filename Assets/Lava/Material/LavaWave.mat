@@ -79,7 +79,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Power: 2.58
+    - _Power: 1.78
     - _RollSpeed: 0.81
     - _ShieldDistortion: 0.03
     - _SmoothnessTextureChannel: 0
@@ -92,7 +92,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _BallColor: {r: 0.98077375, g: 0.48755184, b: 0, a: 1}
+    - _BallColor: {r: 0.46698114, g: 0.17454094, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0.38207546, b: 0.6066027, a: 1}
     - _ConstractColor: {r: 1, g: 0.56931657, b: 0.315, a: 1}
