@@ -61,6 +61,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     IEnumerator WinnerSpotlight() {
+        spotLight.SetActive(true);
         for (int i = 0; i < 3 * 60; i++)
         {
             mainLight.spotAngle -= 79f / 180f;
