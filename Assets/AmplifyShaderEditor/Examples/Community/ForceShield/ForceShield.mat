@@ -45,7 +45,7 @@ Material:
     - _IntersectIntensity: 0.2
     - _Opacity: 0.5
     - _ShieldAnimSpeed: 3
-    - _ShieldDistortion: 0.01
+    - _ShieldDistortion: 0.03
     - _ShieldPatternPower: 5
     - _ShieldPatternSize: 5
     - _ShieldRimPower: 7
