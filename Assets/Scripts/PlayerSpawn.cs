@@ -56,11 +56,7 @@ public class PlayerSpawn : MonoBehaviour
             for (int i = 0; i < pairedCtrl.Count; i++){
                 if (Input.GetButtonDown("Fire1P" + pairedCtrl[i])){
                     int controller = pairedCtrl[i];
-                    //DestroyPlayer(controller);
                     StartCoroutine(WaitToDestroy(controller));
-                    // DestroyUI(controller);
-                    // PlaceUI();
-                    // UnpairCtrl(controller);
                     print("unlink \n" + "paired " + pairedCtrl.Count + "\n" + "unpaired " + unpairedCtrl.Count);
                     return;
                 }
@@ -91,21 +87,6 @@ public class PlayerSpawn : MonoBehaviour
         unpairedCtrl.Add(i);
         if(pairedCtrl.Count != 0)
             pairedCtrl.Remove(i);
-    }
-
-    void DestroyPlayer(int j){
-        for(int i = 0; i < spawnedPlayers.Count; i++){
-            if(j == spawnedPlayers[i].controllerNum){
-                Animator playerAnimator = spawnedPlayers[i].player.GetComponent<Animator>();
-                playerAnimator.SetTrigger("invisible");
-                 if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("DissolveOut"))
-                {
-                    // Avoid any reload.
-                }
-                Destroy(spawnedPlayers[i].player);
-                spawnedPlayers.Remove(spawnedPlayers[i]);
-            }
-        }
     }
 
     IEnumerator WaitToDestroy(int j){
