@@ -117,6 +117,7 @@ public class RigidbodyCharacter : MonoBehaviour
         if (_inputs != Vector3.zero){
             newPosition = Vector3.Normalize(new Vector3(_inputs.x, 0.0f, _inputs.z));
         }
+        Debug.Log("face Dir : " + newPosition);
         transform.LookAt(newPosition + transform.position);
         _body.velocity = _inputs * Speed;
     }
