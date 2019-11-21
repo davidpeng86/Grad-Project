@@ -15,9 +15,7 @@ public class bulletexplode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if(timer <= 0 && hasfloored == false)
-        {
+        //11 times
             Vector3 spawn = gameObject.transform.position + gameObject.transform.up;
             Instantiate(particle, spawn, Random.rotation);
             Instantiate(particle, spawn, Random.rotation);
@@ -31,9 +29,6 @@ public class bulletexplode : MonoBehaviour
             Instantiate(particle, spawn, Random.rotation);
             Instantiate(particle, spawn, Random.rotation);
 
-            timer = Random.Range(0.01f,0.05f);
-            
-        }
         
     }
 
