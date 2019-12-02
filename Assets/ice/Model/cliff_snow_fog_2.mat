@@ -61,7 +61,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Glossiness: 1
-    - _HeightFogEnd: -0.39
+    - _HeightFogEnd: -0.11
     - _HeightFogStart: 0.75
     - _Metallic: 0.62
     - _Mode: 0
@@ -72,5 +72,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.15294118, g: 0.51156795, b: 0.6313726, a: 1}
-    - _HeightFogColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.124226846, g: 0.41408947, b: 0.5128339, a: 1}
+    - _HeightFogColor: {r: 1, g: 1, b: 1, a: 0.23921569}
